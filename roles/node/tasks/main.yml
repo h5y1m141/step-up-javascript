@@ -1,0 +1,11 @@
+---
+- name: prepare node env
+  shell: bash -lc "curl --silent --location https://rpm.nodesource.com/setup_4.x | bash -"
+  tags: node
+- name: install node with yum
+  yum: name={{ item }} state=installed
+  with_items:
+    - nodejs
+    - gcc-c++
+    - make
+  tags: node

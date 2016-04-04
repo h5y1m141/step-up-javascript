@@ -1,0 +1,36 @@
+---
+# package installation
+- name: install basic packages
+  yum: name={{ item }} state=installed
+  with_items:
+    - git
+    - curl
+    - wget
+    - libselinux-python
+    - ruby-devel
+    - readline-devel
+    - ncurses-devel
+    - gdbm-devel
+    - openssl-devel
+    - libxslt-devel
+    - sqlite-devel
+    - libyaml
+    - libyaml-devel
+    - tcl-devel
+    - db4-devel
+    - libffi-devel
+    - gcc
+    - libxml2
+    - libxml2-devel
+    - libxslt
+    - libxslt-devel
+    - ImageMagick
+    - ImageMagick-devel
+
+- name: install Development Tool
+  sudo: true
+  shell: yum -y groupinstall "Development Tools"
+
+# timezone
+- name: set timezone
+  file: src=/usr/share/zoneinfo/Asia/Tokyo dest=/etc/localtime state=link force=yes

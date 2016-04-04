@@ -1,0 +1,15 @@
+---
+- hosts: vagrant
+  sudo: true
+  vars:
+    hostname: vagrant-ansible-rails
+    environtment: vagrant
+    group: ops
+    # NOTE: Password must be hashed. this is created with:
+    # openssl passwd -salt salty -1 あなたのパスワード
+    user_password: $1$salty$SzJsU4qDcXp536Acnlp6I.
+    user: ops
+  roles:
+    - common
+    - nginx
+    - node
