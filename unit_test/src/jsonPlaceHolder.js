@@ -22,11 +22,11 @@ var JsonPlaceHolder = (function(){
     };
     return this._request(params);
   };
-  Posts.prototype.create = function(){
+  Posts.prototype.create = function(_params){
     var params = {
       url: this.rootURL + '/posts',
       method: 'POST',
-      data: ''
+      data: _params
     };
     return this._request(params);
   };  
@@ -34,7 +34,7 @@ var JsonPlaceHolder = (function(){
     var params = {
       url: this.rootURL + '/posts/' + id, 
       method: 'PUT',
-      data: ''
+      data: _params
     };
     return this._request(params);
   };
