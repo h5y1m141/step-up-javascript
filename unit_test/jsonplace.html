@@ -1,0 +1,23 @@
+<html>
+  <head>    
+  </head>
+  <body>
+    <h2>JsonPlaceHolderを利用した簡易サンプル</h2>
+    <div class='posts__index'>
+      <h3>Listing resources</h3>
+      <button id='listResources'>読み込み開始</button>
+      <ul id="postsIndex">
+      </ul>
+    </div>
+    <div class='posts__show'>
+      <h3>Showing a resource</h3>
+      <input type="text" name="postsID" id="postsID" value="1"/>
+      <button id='showResource'>読み込み開始</button>
+      <ul id="postsShow">
+      </ul>
+    </div>
+    <script type="text/javascript" src='/node_modules/jquery/dist/jquery.js'></script>
+    <script type="text/javascript" src='src/jsonPlaceHolder.js'></script>
+    <script type="text/javascript" src='src/app.js'></script>
+  </body>
+</html>
