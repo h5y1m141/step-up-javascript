@@ -12,6 +12,4 @@
 - name: exec npm install
   shell: bash -lc "cd /vagrant; npm install"
   tags: node
-- name: boot gulp-webserver
-  shell: bash -lc "./node_modules/gulp/bin/gulp.js"
-  tags: node
+
