@@ -9,6 +9,7 @@
   "author": "Hiroshi Oyamada",
   "license": "MIT",
   "dependencies": {
+    "gitbook-cli": "^2.1.3",
     "gulp": "^3.9.0",
     "gulp-webserver": "*",
     "jasmine-core": "^2.3.4",
