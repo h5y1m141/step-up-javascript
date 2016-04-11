@@ -9,6 +9,8 @@
     * [Jasmineを使ったコードを実際に書く](doc/use_jasmine.md)
         * [まずはJasmine自体に慣れてみる](doc/use_jasmine.md)
         * [fetch()メソッドが定義されてるというテストを書く](doc/use_jasmine_02.md)
+        * [Gistクラスを定義したファイルを作成して最初のテストを成功させる](doc/use_jasmine_03.md)
+        * [fetch()メソッドを実装する](doc/use_jasmine_04.md)
 * [付録](doc/appendix/README.md)
     * [変数について](doc/appendix/javascript_variables.md)
     * [if文について](doc/appendix/javascript_if.md)
