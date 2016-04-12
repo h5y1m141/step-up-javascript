@@ -1,6 +1,9 @@
 # 目次
 
-* [講座で利用するVagrant環境を構築する](doc/set_up_vagrant.md)
+* [講座で利用する環境を構築する](doc/set_up_introduction.md)
+    * [Vagrant環境を利用して環境を構築する](doc/set_up_vagrant.md)
+        * [Vagrant環境構築中にエラーになる場合](doc/fail_to_set_up_vagrant.md)
+    * [Mac/Windows上でNode.jsの環境を利用する](doc/set_up_with_node.md)
 * [WebAPIと連携する処理に対してどのようにテストを書くか](doc/integrate_web_api.md)
     * [Jasmineについて](doc/about_jasmine.md)
         * [テストを書く上で必要な構成要素](doc/about_jasmine_01.md)

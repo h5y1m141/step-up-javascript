@@ -1,5 +1,21 @@
-## Vagrant環境を立ち上げる
+## Vagrant環境を利用して環境を構築する
 
+Vagrant環境を利用して環境を構築する方法について解説します。
+
+
+なお、検証してる環境は以下のとおりです
+
+### ホストマシン
+
+- Mac OS X Yosemite（10.10.5）
+- Mac OS X El Capitan（10.11.4）
+
+### Vagrant＆VirtulBox
+
+- Vagrant 1.8.1
+- VirtualBox 5.0.10
+
+## 
 
 ホストマシン上で
 
