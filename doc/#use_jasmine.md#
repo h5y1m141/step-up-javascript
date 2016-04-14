@@ -44,7 +44,7 @@ specディレクトリを開いて、新規に**gist_spec.js**という名前の
 describe('Gist', function() {
   describe('fetchメソッド', function() {
     it('定義されてる', function(){
-    });    
+    });
   });
 });
 ```
