@@ -1,0 +1,765 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Mac/Windows上でNode.jsの環境を利用する | このリポジトリについて</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../doc/integrate_web_api.html" />
+    
+    
+    <link rel="prev" href="../doc/fail_to_set_up_vagrant.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="1.2"
+        data-chapter-title="Mac/Windows上でNode.jsの環境を利用する"
+        data-filepath="doc/set_up_with_node.md"
+        data-basepath=".."
+        data-revision="Sat Apr 16 2016 08:33:05 GMT+0900 (JST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="doc/set_up_introduction.html">
+            
+                
+                    <a href="../doc/set_up_introduction.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        講座で利用する環境を構築する
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="doc/set_up_vagrant.html">
+            
+                
+                    <a href="../doc/set_up_vagrant.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        Vagrant環境を利用して環境を構築する
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="doc/fail_to_set_up_vagrant.html">
+            
+                
+                    <a href="../doc/fail_to_set_up_vagrant.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.1.</b>
+                        
+                        Vagrant環境構築中にエラーになる場合
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2" data-path="doc/set_up_with_node.html">
+            
+                
+                    <a href="../doc/set_up_with_node.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        Mac/Windows上でNode.jsの環境を利用する
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="doc/integrate_web_api.html">
+            
+                
+                    <a href="../doc/integrate_web_api.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        WebAPIと連携する処理に対してどのようにテストを書くか
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="doc/about_jasmine.html">
+            
+                
+                    <a href="../doc/about_jasmine.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Jasmineについて
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="doc/about_jasmine_01.html">
+            
+                
+                    <a href="../doc/about_jasmine_01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.1.</b>
+                        
+                        テストを書く上で必要な構成要素
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="doc/about_jasmine_02.html">
+            
+                
+                    <a href="../doc/about_jasmine_02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.2.</b>
+                        
+                        Jasmineの特徴
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="doc/about_jasmine_03.html">
+            
+                
+                    <a href="../doc/about_jasmine_03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.3.</b>
+                        
+                        Jasmineの実行
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="doc/use_jasmine.html">
+            
+                
+                    <a href="../doc/use_jasmine.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        Jasmineを使ったコードを実際に書く
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="doc/use_jasmine_01.html">
+            
+                
+                    <a href="../doc/use_jasmine_01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.1.</b>
+                        
+                        まずはJasmine自体に慣れてみる
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="doc/use_jasmine_02.html">
+            
+                
+                    <a href="../doc/use_jasmine_02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.2.</b>
+                        
+                        fetch()メソッドが定義されてるというテストを書く
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="doc/use_jasmine_03.html">
+            
+                
+                    <a href="../doc/use_jasmine_03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.3.</b>
+                        
+                        Gistクラスを定義したファイルを作成して最初のテストを成功させる
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="doc/use_jasmine_04.html">
+            
+                
+                    <a href="../doc/use_jasmine_04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.4.</b>
+                        
+                        fetch()メソッドのテストを書く
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.5" data-path="doc/use_jasmine_05.html">
+            
+                
+                    <a href="../doc/use_jasmine_05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.5.</b>
+                        
+                        最初に書いたテストを修正する
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.6" data-path="doc/use_jasmine_06.html">
+            
+                
+                    <a href="../doc/use_jasmine_06.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.6.</b>
+                        
+                        beforeEachとspyOnについて
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.7" data-path="doc/use_jasmine_07.html">
+            
+                
+                    <a href="../doc/use_jasmine_07.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.7.</b>
+                        
+                        APIからJSONが得られる記述の説明
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="doc/jasmine_plus_JSONPlaceholder.html">
+            
+                
+                    <a href="../doc/jasmine_plus_JSONPlaceholder.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        WebAPI連携のテストを書く
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="doc/use_jsonplaceholder_with_chrome.html">
+            
+                
+                    <a href="../doc/use_jsonplaceholder_with_chrome.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.1.</b>
+                        
+                        JSONPlaceholderのAPIを簡単に確認
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="doc/jsonplaceholder_specification.html">
+            
+                
+                    <a href="../doc/jsonplaceholder_specification.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.2.</b>
+                        
+                        JSONPlaceholderクラスの仕様を考える
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.3" data-path="doc/jsonplaceholder_01.html">
+            
+                
+                    <a href="../doc/jsonplaceholder_01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.3.</b>
+                        
+                        JSONPlaceholderのクラスを定義して最初のテストを書く
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.4" data-path="doc/jsonplaceholder_02.html">
+            
+                
+                    <a href="../doc/jsonplaceholder_02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.4.</b>
+                        
+                        テストを書きながら投稿情報一覧を取得する処理を実装する
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.5" data-path="doc/jsonplaceholder_03.html">
+            
+            <span><b>2.3.5.</b> テストを書きながら特定の投稿情報を取得する処理を実装する</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.6" data-path="doc/jsonplaceholder_04.html">
+            
+            <span><b>2.3.6.</b> テストを書きながら投稿情報を作成する処理を実装する</span>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="doc/appendix/index.html">
+            
+                
+                    <a href="../doc/appendix/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        付録
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="doc/appendix/javascript_variables.html">
+            
+                
+                    <a href="../doc/appendix/javascript_variables.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        変数について
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="doc/appendix/javascript_if.html">
+            
+                
+                    <a href="../doc/appendix/javascript_if.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        if文について
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="doc/appendix/javascript_if_advance.html">
+            
+                
+                    <a href="../doc/appendix/javascript_if_advance.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.1.</b>
+                        
+                        if文についてさらに詳しく知る
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="doc/appendix/javascript_class_definition.html">
+            
+                
+                    <a href="../doc/appendix/javascript_class_definition.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        JavaScriptクラス定義をPHPのそれと対比して説明
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="doc/appendix/javascript_class_definition_01.html">
+            
+                
+                    <a href="../doc/appendix/javascript_class_definition_01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.1.</b>
+                        
+                        基本的なクラス定義の方法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="doc/appendix/javascript_class_definition_02.html">
+            
+                
+                    <a href="../doc/appendix/javascript_class_definition_02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.2.</b>
+                        
+                        インスタンス化してパブリックな変数をターミナル上に表示する
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.3" data-path="doc/appendix/javascript_class_definition_03.html">
+            
+                
+                    <a href="../doc/appendix/javascript_class_definition_03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.3.</b>
+                        
+                        パブリックなメソッドを定義する
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.4" data-path="doc/appendix/javascript_class_definition_04.html">
+            
+                
+                    <a href="../doc/appendix/javascript_class_definition_04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.4.</b>
+                        
+                        プライベートな変数とその変数を得るためのメソッドを定義
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >このリポジトリについて</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="macwindows&#x4E0A;&#x3067;nodejs&#x306E;&#x74B0;&#x5883;&#x3092;&#x5229;&#x7528;&#x3059;&#x308B;">Mac/Windows&#x4E0A;&#x3067;Node.js&#x306E;&#x74B0;&#x5883;&#x3092;&#x5229;&#x7528;&#x3059;&#x308B;</h1>
+<p>&#x666E;&#x6BB5;&#x304B;&#x3089;Node.js&#x74B0;&#x5883;&#x3092;&#x5229;&#x7528;&#x3057;&#x3066;&#x308B;&#x65B9;&#x306E;&#x5834;&#x5408;&#x306B;&#x306F;&#x3001;npm&#x304C;&#x5229;&#x7528;&#x3067;&#x304D;&#x308B;&#x72B6;&#x6CC1;&#x304B;&#x3068;&#x601D;&#x3044;&#x307E;&#x3059;&#x306E;&#x3067;&#x3001;&#x4EE5;&#x4E0B;&#x624B;&#x9806;&#x3067;&#x306E;&#x74B0;&#x5883;&#x69CB;&#x7BC9;&#x304C;&#x624B;&#x8EFD;&#x306A;&#x306E;&#x3067;&#x3053;&#x3061;&#x3089;&#x3067;&#x3082;OK&#x3067;&#x3059;&#x3002;</p>
+<h2 id="&#x52D5;&#x4F5C;&#x78BA;&#x8A8D;&#x74B0;&#x5883;">&#x52D5;&#x4F5C;&#x78BA;&#x8A8D;&#x74B0;&#x5883;</h2>
+<p>&#x4EE5;&#x4E0B;&#x306E;&#x3068;&#x304A;&#x308A;&#x3067;&#x3059;&#x3002;</p>
+<ul>
+<li>Mac OS X Yosemite&#xFF08;10.10.5&#xFF09;</li>
+<li>Mac OS X El Capitan&#xFF08;10.11.4&#xFF09;</li>
+<li>Node.js<ul>
+<li>v4.2.4</li>
+</ul>
+</li>
+</ul>
+<h3 id="node&#x306E;&#x30D0;&#x30FC;&#x30B8;&#x30E7;&#x30F3;&#x306B;&#x3064;&#x3044;&#x3066;">Node&#x306E;&#x30D0;&#x30FC;&#x30B8;&#x30E7;&#x30F3;&#x306B;&#x3064;&#x3044;&#x3066;</h3>
+<p>Node.js v4&#x3068;Node.js v5&#x306E;&#x9055;&#x3044;&#x306F;Node.js &#x65E5;&#x672C;&#x30E6;&#x30FC;&#x30B6;&#x30FC;&#x30B0;&#x30EB;&#x30FC;&#x30D7;&#x4EE3;&#x8868;&#x306E;&#x65B9;&#x304C;&#x66F8;&#x3044;&#x305F;&#x4EE5;&#x4E0B;&#x8A18;&#x4E8B;&#x304C;&#x53C2;&#x8003;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;</p>
+<blockquote>
+<p>Node.js v4&#x306F;LTS&#x3068;&#x3044;&#x3046;&#x30EA;&#x30EA;&#x30FC;&#x30B9;&#x3057;&#x3066;&#x304B;&#x3089;2&#x5E74;&#x534A;&#x30B5;&#x30DD;&#x30FC;&#x30C8;&#x3059;&#x308B;&#x30B5;&#x30DD;&#x30FC;&#x30C8;&#x30DD;&#x30EA;&#x30B7;&#x30FC;&#x304C;&#x3064;&#x3044;&#x3066;&#x3044;&#x307E;&#x3059;&#x304C;&#x3001;Node.js v5&#x306B;&#x306F;&#x3064;&#x3044;&#x3066;&#x3044;&#x307E;&#x305B;&#x3093;&#x3002;&#x3064;&#x307E;&#x308A;&#x3001; Node.js v5&#x306F;&#x6B21;&#x306E;&#x30D0;&#x30FC;&#x30B8;&#x30E7;&#x30F3;&#x304C;&#x51FA;&#x305F;&#x3089;&#x30B5;&#x30DD;&#x30FC;&#x30C8;&#x3055;&#x308C;&#x306A;&#x304F;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002; &#x4ECA;&#x306E;&#x3068;&#x3053;&#x308D;&#x3001; LTS&#x306E;&#x5BFE;&#x8C61;&#x306B;&#x306A;&#x308B;&#x306E;&#x306F;&#x5076;&#x6570;&#x306E;&#x30D0;&#x30FC;&#x30B8;&#x30E7;&#x30F3;&#x3068;&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;&#x305F;&#x3060;&#x3057;&#x3001;&#x5076;&#x6570;&#x306E;&#x30D0;&#x30FC;&#x30B8;&#x30E7;&#x30F3;&#x304C;&#x5FC5;&#x305A;LTS&#x3068;&#x3044;&#x3046;&#x308F;&#x3051;&#x3067;&#x306F;&#x306A;&#x304F;&#x3001;&#x4ECA;&#x306E;&#x3068;&#x3053;&#x308D;&#x5076;&#x7136;&#x305D;&#x3046;&#x3044;&#x3046;&#x30D0;&#x30FC;&#x30B8;&#x30E7;&#x30F3;&#x306B;&#x306A;&#x3063;&#x3066;&#x3044;&#x308B;&#x3068;&#x3044;&#x3046;&#x306E;&#x304C;&#x6B63;&#x3057;&#x3044;&#x72B6;&#x614B;&#x306A;&#x306E;&#x3067;&#x3001;&#x304D;&#x3061;&#x3093;&#x3068;LTS&#x304B;&#x3069;&#x3046;&#x304B;&#x3092;&#x628A;&#x63E1;&#x3059;&#x308B;&#x305F;&#x3081;&#x306B;&#x306F;&#x3001;&#x30D0;&#x30FC;&#x30B8;&#x30E7;&#x30F3;&#x756A;&#x53F7;&#x306E;&#x4ED6;&#x306B;LTS&#x8B58;&#x5225;&#x540D;(Argon&#x3084;Boron&#x7B49;&#x306E;&#x5143;&#x7D20;&#x540D;)&#x304C;&#x4ED8;&#x3044;&#x3066;&#x3044;&#x308B;&#x3053;&#x3068;&#x3092;&#x78BA;&#x8A8D;&#x3057;&#x305F;&#x307B;&#x3046;&#x304C;&#x3088;&#x3044;&#x3067;&#x3059;&#x3002;</p>
+<p><a href="https://html5experts.jp/yosuke_furukawa/17791/" target="_blank">&#x4ECA;&#x304B;&#x3089;&#x3067;&#x3082;&#x9593;&#x306B;&#x5408;&#x3046;&#xFF01;Node.js v4&#xFF06;v5&#x306F;&#x4F55;&#x304C;&#x5909;&#x308F;&#x3063;&#x305F;&#x304B;&#xFF1F;</a></p>
+</blockquote>
+<h3 id="nodejs&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x65B9;&#x6CD5;">Node.js&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x65B9;&#x6CD5;</h3>
+<p>Mac&#x306E;&#x5834;&#x5408;&#x306B;&#x306F;&#x8272;&#x3005;&#x3042;&#x308B;&#x304B;&#x3082;&#x3057;&#x308C;&#x307E;&#x305B;&#x3093;&#x304C;&#x3001;&#x79C1;&#x306F;Node.js&#x306F;nodebrew&#x3092;&#x5229;&#x7528;&#x3057;&#x3066;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3057;&#x3066;&#x307E;&#x3059;&#x3002;</p>
+<pre><code class="lang-sh">nodebrew -v
+nodebrew <span class="hljs-number">0.9</span>.<span class="hljs-number">2</span>
+
+Usage:
+    nodebrew <span class="hljs-built_in">help</span>                         Show this message
+    nodebrew install &lt;version&gt;            Download and install a &lt;version&gt; (compile from <span class="hljs-built_in">source</span>)
+    nodebrew install-binary &lt;version&gt;     Download and install a &lt;version&gt; (binary file)
+    nodebrew uninstall &lt;version&gt;          Uninstall a version
+    nodebrew use &lt;version&gt;                Use &lt;version&gt;
+    nodebrew list                         List installed versions
+    nodebrew ls                           Alias <span class="hljs-keyword">for</span> `list`
+    nodebrew ls-remote                    List remote versions
+    nodebrew ls-all                       List remote and installed versions
+    nodebrew <span class="hljs-built_in">alias</span> &lt;key&gt; &lt;version&gt;        Set <span class="hljs-built_in">alias</span> to version
+    nodebrew <span class="hljs-built_in">unalias</span> &lt;key&gt;                Remove <span class="hljs-built_in">alias</span>
+    nodebrew clean &lt;version&gt; | all        Remove <span class="hljs-built_in">source</span> file
+    nodebrew selfupdate                   Update nodebrew
+    nodebrew migrate-package &lt;version&gt;    Install global NPM packages contained <span class="hljs-keyword">in</span> &lt;version&gt; to current version
+    nodebrew <span class="hljs-built_in">exec</span> &lt;version&gt; -- &lt;<span class="hljs-built_in">command</span>&gt;  Execute &lt;<span class="hljs-built_in">command</span>&gt; specified &lt;version&gt;
+
+Example:
+    <span class="hljs-comment"># install from binary</span>
+    nodebrew install-binary v0.<span class="hljs-number">10.22</span>
+
+    <span class="hljs-comment"># use a specific version number</span>
+    nodebrew use v0.<span class="hljs-number">10.22</span>
+
+    <span class="hljs-comment"># io.js</span>
+    nodebrew install-binary io@v1.<span class="hljs-number">0.0</span>
+    nodebrew use io@v1.<span class="hljs-number">0.0</span>
+</code></pre>
+<h2 id="&#x74B0;&#x5883;&#x69CB;&#x7BC9;&#x3059;&#x308B;">&#x74B0;&#x5883;&#x69CB;&#x7BC9;&#x3059;&#x308B;</h2>
+<p>&#x3044;&#x3064;&#x3082;&#x901A;&#x308A;&#x306B;</p>
+<pre><code class="lang-sh">npm install
+</code></pre>
+<p>&#x3057;&#x3066;&#x3044;&#x305F;&#x3060;&#x3051;&#x308C;&#x308C;&#x3070;OK&#x3067;&#x3059;</p>
+<p>&#x53C2;&#x8003;&#x307E;&#x3067;&#x306B;&#x4F5C;&#x696D;&#x6642;&#x306E;&#x753B;&#x9762;&#x30AD;&#x30E3;&#x30D7;&#x30C1;&#x30E3;&#x3092;&#x4EE5;&#x4E0B;&#x8CBC;&#x3063;&#x3066;&#x304A;&#x304D;&#x307E;&#x3059;</p>
+<p><img src="images/npm_install_01.png" alt="npm install"></p>
+<h2 id="npm-install-&#x5B8C;&#x4E86;&#x3057;&#x305F;&#x3089;&#x3001;gulp&#x306E;web-server&#x6A5F;&#x80FD;&#x304C;&#x52D5;&#x4F5C;&#x3059;&#x308B;&#x304B;&#x78BA;&#x8A8D;">npm install &#x5B8C;&#x4E86;&#x3057;&#x305F;&#x3089;&#x3001;gulp&#x306E;web server&#x6A5F;&#x80FD;&#x304C;&#x52D5;&#x4F5C;&#x3059;&#x308B;&#x304B;&#x78BA;&#x8A8D;</h2>
+<p>&#x4EE5;&#x4E0B;&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x3067;gulp&#x306E;web server&#x6A5F;&#x80FD;&#x304C;&#x52D5;&#x4F5C;&#x3059;&#x308B;&#x304B;&#x78BA;&#x8A8D;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;</p>
+<pre><code class="lang-sh">./node_modules/gulp/bin/gulp.js
+</code></pre>
+<p><img src="images/npm_install_02.png" alt="Vagrant&#x74B0;&#x5883;&#x69CB;&#x7BC9;&#x5931;&#x6557;"></p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../doc/fail_to_set_up_vagrant.html" class="navigation navigation-prev " aria-label="Previous page: Vagrant環境構築中にエラーになる場合"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../doc/integrate_web_api.html" class="navigation navigation-next " aria-label="Next page: WebAPIと連携する処理に対してどのようにテストを書くか"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

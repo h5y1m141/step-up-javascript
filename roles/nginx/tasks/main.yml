@@ -1,0 +1,9 @@
+---
+- name: install nginx
+  yum: name=nginx state=installed
+  tags: nginx
+- name: place nginx conf file
+  copy: src=/vagrant/nginx/nginx.conf dest=/etc/nginx/nginx.conf mode=0644 owner=root group=root
+  tags: nginx
+- name: start nginx
+  shell: bash -c 'systemctl enable nginx; systemctl start nginx'

@@ -1,0 +1,749 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>最初に書いたテストを修正する | このリポジトリについて</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../doc/use_jasmine_06.html" />
+    
+    
+    <link rel="prev" href="../doc/use_jasmine_04.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="2.2.5"
+        data-chapter-title="最初に書いたテストを修正する"
+        data-filepath="doc/use_jasmine_05.md"
+        data-basepath=".."
+        data-revision="Sat Apr 16 2016 08:33:05 GMT+0900 (JST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="doc/set_up_introduction.html">
+            
+                
+                    <a href="../doc/set_up_introduction.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        講座で利用する環境を構築する
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="doc/set_up_vagrant.html">
+            
+                
+                    <a href="../doc/set_up_vagrant.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        Vagrant環境を利用して環境を構築する
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="doc/fail_to_set_up_vagrant.html">
+            
+                
+                    <a href="../doc/fail_to_set_up_vagrant.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.1.</b>
+                        
+                        Vagrant環境構築中にエラーになる場合
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="doc/set_up_with_node.html">
+            
+                
+                    <a href="../doc/set_up_with_node.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        Mac/Windows上でNode.jsの環境を利用する
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="doc/integrate_web_api.html">
+            
+                
+                    <a href="../doc/integrate_web_api.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        WebAPIと連携する処理に対してどのようにテストを書くか
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="doc/about_jasmine.html">
+            
+                
+                    <a href="../doc/about_jasmine.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Jasmineについて
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="doc/about_jasmine_01.html">
+            
+                
+                    <a href="../doc/about_jasmine_01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.1.</b>
+                        
+                        テストを書く上で必要な構成要素
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="doc/about_jasmine_02.html">
+            
+                
+                    <a href="../doc/about_jasmine_02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.2.</b>
+                        
+                        Jasmineの特徴
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="doc/about_jasmine_03.html">
+            
+                
+                    <a href="../doc/about_jasmine_03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.3.</b>
+                        
+                        Jasmineの実行
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="doc/use_jasmine.html">
+            
+                
+                    <a href="../doc/use_jasmine.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        Jasmineを使ったコードを実際に書く
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="doc/use_jasmine_01.html">
+            
+                
+                    <a href="../doc/use_jasmine_01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.1.</b>
+                        
+                        まずはJasmine自体に慣れてみる
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="doc/use_jasmine_02.html">
+            
+                
+                    <a href="../doc/use_jasmine_02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.2.</b>
+                        
+                        fetch()メソッドが定義されてるというテストを書く
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="doc/use_jasmine_03.html">
+            
+                
+                    <a href="../doc/use_jasmine_03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.3.</b>
+                        
+                        Gistクラスを定義したファイルを作成して最初のテストを成功させる
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="doc/use_jasmine_04.html">
+            
+                
+                    <a href="../doc/use_jasmine_04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.4.</b>
+                        
+                        fetch()メソッドのテストを書く
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.2.5" data-path="doc/use_jasmine_05.html">
+            
+                
+                    <a href="../doc/use_jasmine_05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.5.</b>
+                        
+                        最初に書いたテストを修正する
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.6" data-path="doc/use_jasmine_06.html">
+            
+                
+                    <a href="../doc/use_jasmine_06.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.6.</b>
+                        
+                        beforeEachとspyOnについて
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.7" data-path="doc/use_jasmine_07.html">
+            
+                
+                    <a href="../doc/use_jasmine_07.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.7.</b>
+                        
+                        APIからJSONが得られる記述の説明
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="doc/jasmine_plus_JSONPlaceholder.html">
+            
+                
+                    <a href="../doc/jasmine_plus_JSONPlaceholder.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        WebAPI連携のテストを書く
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="doc/use_jsonplaceholder_with_chrome.html">
+            
+                
+                    <a href="../doc/use_jsonplaceholder_with_chrome.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.1.</b>
+                        
+                        JSONPlaceholderのAPIを簡単に確認
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="doc/jsonplaceholder_specification.html">
+            
+                
+                    <a href="../doc/jsonplaceholder_specification.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.2.</b>
+                        
+                        JSONPlaceholderクラスの仕様を考える
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.3" data-path="doc/jsonplaceholder_01.html">
+            
+                
+                    <a href="../doc/jsonplaceholder_01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.3.</b>
+                        
+                        JSONPlaceholderのクラスを定義して最初のテストを書く
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.4" data-path="doc/jsonplaceholder_02.html">
+            
+                
+                    <a href="../doc/jsonplaceholder_02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.4.</b>
+                        
+                        テストを書きながら投稿情報一覧を取得する処理を実装する
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.5" data-path="doc/jsonplaceholder_03.html">
+            
+            <span><b>2.3.5.</b> テストを書きながら特定の投稿情報を取得する処理を実装する</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.6" data-path="doc/jsonplaceholder_04.html">
+            
+            <span><b>2.3.6.</b> テストを書きながら投稿情報を作成する処理を実装する</span>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="doc/appendix/index.html">
+            
+                
+                    <a href="../doc/appendix/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        付録
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="doc/appendix/javascript_variables.html">
+            
+                
+                    <a href="../doc/appendix/javascript_variables.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        変数について
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="doc/appendix/javascript_if.html">
+            
+                
+                    <a href="../doc/appendix/javascript_if.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        if文について
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="doc/appendix/javascript_if_advance.html">
+            
+                
+                    <a href="../doc/appendix/javascript_if_advance.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.1.</b>
+                        
+                        if文についてさらに詳しく知る
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="doc/appendix/javascript_class_definition.html">
+            
+                
+                    <a href="../doc/appendix/javascript_class_definition.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        JavaScriptクラス定義をPHPのそれと対比して説明
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="doc/appendix/javascript_class_definition_01.html">
+            
+                
+                    <a href="../doc/appendix/javascript_class_definition_01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.1.</b>
+                        
+                        基本的なクラス定義の方法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="doc/appendix/javascript_class_definition_02.html">
+            
+                
+                    <a href="../doc/appendix/javascript_class_definition_02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.2.</b>
+                        
+                        インスタンス化してパブリックな変数をターミナル上に表示する
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.3" data-path="doc/appendix/javascript_class_definition_03.html">
+            
+                
+                    <a href="../doc/appendix/javascript_class_definition_03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.3.</b>
+                        
+                        パブリックなメソッドを定義する
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.4" data-path="doc/appendix/javascript_class_definition_04.html">
+            
+                
+                    <a href="../doc/appendix/javascript_class_definition_04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.4.</b>
+                        
+                        プライベートな変数とその変数を得るためのメソッドを定義
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >このリポジトリについて</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="&#x6700;&#x521D;&#x306B;&#x66F8;&#x3044;&#x305F;&#x30C6;&#x30B9;&#x30C8;&#x3092;&#x4FEE;&#x6B63;&#x3059;&#x308B;">&#x6700;&#x521D;&#x306B;&#x66F8;&#x3044;&#x305F;&#x30C6;&#x30B9;&#x30C8;&#x3092;&#x4FEE;&#x6B63;&#x3059;&#x308B;</h2>
+<p>&#x5148;&#x307B;&#x3069;&#x66F8;&#x3044;&#x305F;&#x30C6;&#x30B9;&#x30C8;&#x3092;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306B;&#x4FEE;&#x6B63;&#x3057;&#x307E;&#x3059;</p>
+<pre><code class="lang-javascript">describe(<span class="hljs-string">&apos;Gist&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  beforeEach(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">this</span>.gist = <span class="hljs-keyword">new</span> Gist();
+  }); 
+  describe(<span class="hljs-string">&apos;fetch&#x30E1;&#x30BD;&#x30C3;&#x30C9;&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-comment">// (1) &#x4EE5;&#x4E0B;&#x3092;&#x8FFD;&#x52A0;</span>
+    beforeEach(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+      spyOn(<span class="hljs-keyword">this</span>.gist, <span class="hljs-string">&apos;fetch&apos;</span>).and.callFake(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+        <span class="hljs-keyword">var</span> deferred = $.Deferred();
+        <span class="hljs-keyword">var</span> dummyResponse = [
+          {
+            <span class="hljs-string">&apos;author&apos;</span>: <span class="hljs-string">&apos;&#x304A;&#x3084;&#x307E;&#x3060;&#x3072;&#x308D;&#x3057;&apos;</span>,
+            <span class="hljs-string">&apos;text&apos;</span>: <span class="hljs-string">&apos;&#x306F;&#x3058;&#x3081;&#x3066;&#x306E;React.js&apos;</span>
+          },
+          {
+            <span class="hljs-string">&apos;author&apos;</span>: <span class="hljs-string">&apos;Hiroshi Oyamada&apos;</span>,
+            <span class="hljs-string">&apos;text&apos;</span>: <span class="hljs-string">&apos;First Step ReactJS&apos;</span>
+          }
+        ];
+        deferred.resolve(<span class="hljs-built_in">JSON</span>.stringify(dummyResponse));
+        <span class="hljs-keyword">return</span> deferred.promise();
+      });
+    });
+    <span class="hljs-comment">// &#x3053;&#x3053;&#x307E;&#x3067;&#x304C;(1)&#x306E;&#x8FFD;&#x52A0;&#x7B87;&#x6240;</span>
+    it(<span class="hljs-string">&apos;&#x5B9A;&#x7FA9;&#x3055;&#x308C;&#x3066;&#x308B;&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+      expect(<span class="hljs-keyword">this</span>.gist.fetch()).toBeDefined();
+    });
+    <span class="hljs-comment">// (2) &#x4EE5;&#x4E0B;&#x3092;&#x8FFD;&#x52A0;</span>
+    it(<span class="hljs-string">&apos;API&#x304B;&#x3089;JSON&#x304C;&#x5F97;&#x3089;&#x308C;&#x308B;&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+      <span class="hljs-keyword">var</span> promise,
+          result;
+      promise = <span class="hljs-keyword">this</span>.gist.fetch();
+      promise.done(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">data</span>)</span>{
+        result = <span class="hljs-built_in">JSON</span>.parse(data); 
+      });
+      expect(result[<span class="hljs-number">0</span>].author).toEqual(<span class="hljs-string">&apos;&#x304A;&#x3084;&#x307E;&#x3060;&#x3072;&#x308D;&#x3057;&apos;</span>);
+    });
+    <span class="hljs-comment">// &#x3053;&#x3053;&#x307E;&#x3067;&#x304C;(2) &#x306E;&#x8FFD;&#x52A0;&#x7B87;&#x6240;</span>
+  });
+});
+</code></pre>
+<p>&#x7DE8;&#x96C6;&#x7B87;&#x6240;&#x306E;&#x30B3;&#x30FC;&#x30C9;&#x306E;&#x8AAC;&#x660E;&#x306B;&#x3064;&#x3044;&#x3066;&#x9806;&#x756A;&#x306B;&#x8AAC;&#x660E;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+<h3 id="1&#x306B;&#x3064;&#x3044;&#x3066;&#x306E;&#x8AAC;&#x660E;">1&#x306B;&#x3064;&#x3044;&#x3066;&#x306E;&#x8AAC;&#x660E;</h3>
+<p>WebAPI&#x3068;&#x9023;&#x643A;&#x3059;&#x308B;&#x30C6;&#x30B9;&#x30C8;&#x3092;&#x66F8;&#x304F;&#x6642;&#x306B;&#x6BCE;&#x56DE;&#x30A2;&#x30AF;&#x30BB;&#x30B9;&#x3059;&#x308B;&#x306E;&#x306F;&#x958B;&#x767A;&#x52B9;&#x7387;&#x304C;&#x60AA;&#x304B;&#x3063;&#x305F;&#x308A;&#x3059;&#x308B;&#x306E;&#x3067;&#x3001;&#x5358;&#x4F53;&#x30C6;&#x30B9;&#x30C8;&#x3067;&#x5FC5;&#x8981;&#x3068;&#x306A;&#x308B;&#x30D1;&#x30FC;&#x30C4;&#x3092;&#x64EC;&#x4F3C;&#x7684;&#x306B;&#x518D;&#x73FE;&#x3059;&#x308B;&#x305F;&#x3081;&#x306E;&#x4ED5;&#x7D44;&#x307F;&#x3092;&#x6D3B;&#x7528;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x591A;&#x3005;&#x3042;&#x308A;&#x3001;&#x4E0A;&#x8A18;&#x4FEE;&#x6B63;&#x3057;&#x305F;(1)&#x3067;&#x305D;&#x306E;&#x51E6;&#x7406;&#x3092;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p>
+<p>&#x500B;&#x3005;&#x306E;&#x51E6;&#x7406;&#x3067;&#x30DD;&#x30A4;&#x30F3;&#x30C8;&#x306B;&#x306A;&#x308B;&#x7B87;&#x6240;&#x3092;&#x9806;&#x756A;&#x306B;&#x8AAC;&#x660E;&#x3057;&#x3066;&#x3044;&#x304D;&#x307E;&#x3059;&#x3002;</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../doc/use_jasmine_04.html" class="navigation navigation-prev " aria-label="Previous page: fetch()メソッドのテストを書く"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../doc/use_jasmine_06.html" class="navigation navigation-next " aria-label="Next page: beforeEachとspyOnについて"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
