@@ -31,11 +31,11 @@ var id = 1,
       title: 'タイトル',
       body: '本文'
     };
-jsonPlaceHolder.posts.index();              // 一覧を取得
-jsonPlaceHolder.posts.show(id);             // 指定したIDの投稿情報を取得
-jsonPlaceHolder.posts.create(postData);     // 投稿情報を作成
-jsonPlaceHolder.posts.update(id, postData); // 指定したIDの投稿情報を更新
-jsonPlaceHolder.posts.destroy(id);          // 指定したIDの投稿情報を削除
+jsonPlaceHolder.post.index();              // 一覧を取得
+jsonPlaceHolder.post.show(id);             // 指定したIDの投稿情報を取得
+jsonPlaceHolder.post.create(postData);     // 投稿情報を作成
+jsonPlaceHolder.post.update(id, postData); // 指定したIDの投稿情報を更新
+jsonPlaceHolder.post.destroy(id);          // 指定したIDの投稿情報を削除
 ```
 
 という形で行えて、コメント情報に対する処理に対しては
