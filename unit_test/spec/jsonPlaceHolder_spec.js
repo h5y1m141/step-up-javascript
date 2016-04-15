@@ -11,26 +11,26 @@ describe('JsonPlaceHolder', function() {
       expect(jsonPlaceHolder.rootURL).toBe('http://jsonplaceholder.typicode.com');
     });
   });
-  describe('Postsについて', function() {
+  describe('Postについて', function() {
     describe('_request()メソッドについて', function() {
       beforeEach(function () {
-        spyOn(jsonPlaceHolder.posts, '_request').and.callThrough();
+        spyOn(jsonPlaceHolder.post, '_request').and.callThrough();
       });      
       it('WebAPIにアクセスする個々のメソッドが呼ばれる時には通信処理を担う_request()メソッドが呼ばれる', function(){
-        jsonPlaceHolder.posts.index();
-        expect(jsonPlaceHolder.posts._request).toHaveBeenCalled();
-        jsonPlaceHolder.posts.show();
-        expect(jsonPlaceHolder.posts._request).toHaveBeenCalled();
-        jsonPlaceHolder.posts.create();
-        expect(jsonPlaceHolder.posts._request).toHaveBeenCalled();
-        jsonPlaceHolder.posts.update();
-        expect(jsonPlaceHolder.posts._request).toHaveBeenCalled();
-        jsonPlaceHolder.posts.destroy();
-        expect(jsonPlaceHolder.posts._request).toHaveBeenCalled();
+        jsonPlaceHolder.post.index();
+        expect(jsonPlaceHolder.post._request).toHaveBeenCalled();
+        jsonPlaceHolder.post.show();
+        expect(jsonPlaceHolder.post._request).toHaveBeenCalled();
+        jsonPlaceHolder.post.create();
+        expect(jsonPlaceHolder.post._request).toHaveBeenCalled();
+        jsonPlaceHolder.post.update();
+        expect(jsonPlaceHolder.post._request).toHaveBeenCalled();
+        jsonPlaceHolder.post.destroy();
+        expect(jsonPlaceHolder.post._request).toHaveBeenCalled();
       });        
     });
     describe('WebAPIにアクセスするメソッドについて', function() {
-      var fakeResult =             [
+      var fakeResult = [
         {
           userId: 1,
           id: 1,
@@ -50,25 +50,25 @@ describe('JsonPlaceHolder', function() {
           body: 'et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut'
         }
       ];
-      beforeEach(function () {      
-        spyOn(jsonPlaceHolder.posts, 'index').and.callFake(function(){
+      beforeEach(function () {
+        spyOn(jsonPlaceHolder.post, 'index').and.callFake(function(){
           var deferred = $.Deferred();
           deferred.resolve(fakeResult);
           return deferred.promise();
         });
-        spyOn(jsonPlaceHolder.posts, 'show').and.callFake(function(){
+        spyOn(jsonPlaceHolder.post, 'show').and.callFake(function(){
           var deferred = $.Deferred();
           deferred.resolve(fakeResult[0]);
           return deferred.promise();
         });
-        spyOn(jsonPlaceHolder.posts, 'create').and.callFake(function(param){
+        spyOn(jsonPlaceHolder.post, 'create').and.callFake(function(param){
           var deferred = $.Deferred();
           // 基本的には引数に渡したparamオブジェクトがそのまま返ってくる仕様のようなので
           // resolveにはparamオブジェクトをひとまずそのまま指定します
           deferred.resolve(param); 
           return deferred.promise();
         });        
-        spyOn(jsonPlaceHolder.posts, 'update').and.callFake(function(id, _param){
+        spyOn(jsonPlaceHolder.post, 'update').and.callFake(function(id, _param){
           var deferred = $.Deferred();
           deferred.resolve(_param);
           return deferred.promise();
@@ -76,12 +76,12 @@ describe('JsonPlaceHolder', function() {
       });
       describe('indexについて', function() {
         it('定義されてる', function(){
-          expect(jsonPlaceHolder.posts.index()).toBeDefined();
+          expect(jsonPlaceHolder.post.index()).toBeDefined();
         });
         it('一覧を取得できる', function(){
           var result,
               promise;
-          promise = jsonPlaceHolder.posts.index();
+          promise = jsonPlaceHolder.post.index();
           promise.done(function(response){
             result = response;
           });
@@ -90,12 +90,12 @@ describe('JsonPlaceHolder', function() {
       });
       describe('showについて', function() {
         it('定義されてる', function(){
-          expect(jsonPlaceHolder.posts.show()).toBeDefined();
+          expect(jsonPlaceHolder.post.show()).toBeDefined();
         });
         it('指定されたpostが取得できる', function(){
           var result,
               promise;
-          promise = jsonPlaceHolder.posts.show(1);
+          promise = jsonPlaceHolder.post.show(1);
           promise.done(function(response){
             result = response;
           });
@@ -104,7 +104,7 @@ describe('JsonPlaceHolder', function() {
       });
       describe('createについて', function() {
         it('定義されてる', function(){
-          expect(jsonPlaceHolder.posts.create()).toBeDefined();
+          expect(jsonPlaceHolder.post.create()).toBeDefined();
         });
         it('postを作成できる', function(){
           var result,
@@ -114,7 +114,7 @@ describe('JsonPlaceHolder', function() {
                 title: 'sunt aut facere repellat provident occaecati excepturi optio reprehenderit',
                 body: 'quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto'
               };
-          promise = jsonPlaceHolder.posts.create(data);
+          promise = jsonPlaceHolder.post.create(data);
           promise.done(function(response){
             result = response;
           });
@@ -123,7 +123,7 @@ describe('JsonPlaceHolder', function() {
       });
       describe('updateについて', function() {
         it('定義されてる', function(){
-          expect(jsonPlaceHolder.posts.update()).toBeDefined();
+          expect(jsonPlaceHolder.post.update()).toBeDefined();
         });
         it('指定idのpostを更新できる', function(){
           var result,
@@ -133,7 +133,7 @@ describe('JsonPlaceHolder', function() {
                 'title': 'タイトルを更新',
                 'body': '本文を更新'
               };
-          promise = jsonPlaceHolder.posts.update(id, data);
+          promise = jsonPlaceHolder.post.update(id, data);
           promise.done(function(response){
             result = response;
           });
@@ -142,7 +142,7 @@ describe('JsonPlaceHolder', function() {
       });
       describe('destroyについて', function() {
         it('定義されてる', function(){
-          expect(jsonPlaceHolder.posts.destroy()).toBeDefined();
+          expect(jsonPlaceHolder.post.destroy()).toBeDefined();
         });
       });      
     });
