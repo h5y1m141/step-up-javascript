@@ -53,7 +53,7 @@
         data-chapter-title="WebAPI連携のテストを書く"
         data-filepath="doc/jasmine_plus_JSONPlaceholder.md"
         data-basepath=".."
-        data-revision="Sat Apr 16 2016 08:33:05 GMT+0900 (JST)"
+        data-revision="Sat Apr 16 2016 08:38:17 GMT+0900 (JST)"
         data-innerlanguage="">
     
 
@@ -387,7 +387,7 @@
                         
                             <b>2.3.1.</b>
                         
-                        JSONPlaceholderのAPIを簡単に確認
+                        JSONPlaceholderとは？
                     </a>
             
             
@@ -402,7 +402,7 @@
                         
                             <b>2.3.2.</b>
                         
-                        JSONPlaceholderクラスの仕様を考える
+                        実装するクラスの仕様を考える
                     </a>
             
             
@@ -417,7 +417,7 @@
                         
                             <b>2.3.3.</b>
                         
-                        JSONPlaceholderのクラスを定義して最初のテストを書く
+                        クラスを定義して最初のテストを書く
                     </a>
             
             
@@ -432,7 +432,7 @@
                         
                             <b>2.3.4.</b>
                         
-                        テストを書きながら投稿情報一覧を取得する処理を実装する
+                        投稿情報一覧を取得する処理を実装する
                     </a>
             
             
@@ -440,14 +440,30 @@
     
         <li class="chapter " data-level="2.3.5" data-path="doc/jsonplaceholder_03.html">
             
-            <span><b>2.3.5.</b> テストを書きながら特定の投稿情報を取得する処理を実装する</span>
+                
+                    <a href="../doc/jsonplaceholder_03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.5.</b>
+                        
+                        特定の投稿情報を取得する処理を実装する
+                    </a>
             
             
         </li>
     
-        <li class="chapter " data-level="2.3.6" data-path="doc/jsonplaceholder_04.html">
+        <li class="chapter " data-level="2.3.6" data-path="doc/jsonplaceholder_refactoring.html">
             
-            <span><b>2.3.6.</b> テストを書きながら投稿情報を作成する処理を実装する</span>
+                
+                    <a href="../doc/jsonplaceholder_refactoring.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.6.</b>
+                        
+                        APIアクセス部分をリファクタリング
+                    </a>
             
             
         </li>
@@ -650,14 +666,6 @@
                     
                         <h2 id="webapi&#x9023;&#x643A;&#x306E;&#x30C6;&#x30B9;&#x30C8;&#x3092;&#x66F8;&#x304F;">WebAPI&#x9023;&#x643A;&#x306E;&#x30C6;&#x30B9;&#x30C8;&#x3092;&#x66F8;&#x304F;</h2>
 <p>&#x3053;&#x306E;&#x7AE0;&#x3067;&#x306F;&#x3001;&#x6700;&#x8FD1;&#x306E;Web&#x30A2;&#x30D7;&#x30EA;&#x30B1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x3067;&#x3088;&#x304F;&#x3042;&#x308B;REST&#x306E;&#x539F;&#x5247;&#x306B;&#x5F93;&#x3063;&#x3066;&#x5B9F;&#x88C5;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;WebAPI&#x3068;&#x9023;&#x643A;&#x3059;&#x308B;&#x51E6;&#x7406;&#x306B;&#x5BFE;&#x3059;&#x308B;Jasmine&#x306E;&#x30C6;&#x30B9;&#x30C8;&#x3092;&#x66F8;&#x3044;&#x3066;&#x307F;&#x307E;&#x3059;&#x3002;</p>
-<p>&#x30E1;&#x30B8;&#x30E3;&#x30FC;&#x306A;Web&#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x3067;&#x306F;&#x3001;&#x958B;&#x767A;&#x8005;&#x5411;&#x3051;&#x306B;REST&#x306A;WebAPI&#x3092;&#x63D0;&#x4F9B;&#x3057;&#x3066;&#x308B;&#x306E;&#x3067;&#x3059;&#x304C;&#x3001;&#x5229;&#x7528;&#x306B;&#x3042;&#x305F;&#x3063;&#x3066;&#x4E8B;&#x524D;&#x6E96;&#x5099;&#x304C;&#x8272;&#x3005;&#x5FC5;&#x8981;&#x3067;&#x7169;&#x96D1;&#x306A;&#x9762;&#x304C;&#x3042;&#x308B;&#x306E;&#x3067;&#x4ECA;&#x56DE;&#x306F;</p>
-<blockquote>
-<p>Fake Online REST API for Testing and Prototyping</p>
-<p><a href="http://jsonplaceholder.typicode.com/&#x3088;&#x308A;" target="_blank">http://jsonplaceholder.typicode.com/&#x3088;&#x308A;</a></p>
-</blockquote>
-<p>&#x3068;&#x3044;&#x3046;&#x7279;&#x5FB4;&#x3092;&#x3082;&#x3063;&#x305F;<a href="http://jsonplaceholder.typicode.com/" target="_blank">JSONPlaceholder</a> &#x3068;&#x3044;&#x3046;&#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x3092;&#x5229;&#x7528;&#x3057;&#x307E;&#x3059;&#x3002;</p>
-<p>JSONPlaceholder&#x306F;&#x30B5;&#x30A4;&#x30F3;&#x30A2;&#x30C3;&#x30D7;&#x4E0D;&#x8981;&#x3067;&#x3001;&#x5229;&#x7528;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
-<p><img src="images/about_JSONPlaceholder.png" alt="JSONPlaceholder&#x306E;&#x753B;&#x9762;&#x30A4;&#x30E1;&#x30FC;&#x30B8;"></p>
 
                     
                     </section>
@@ -671,7 +679,7 @@
         <a href="../doc/use_jasmine_07.html" class="navigation navigation-prev " aria-label="Previous page: APIからJSONが得られる記述の説明"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../doc/use_jsonplaceholder_with_chrome.html" class="navigation navigation-next " aria-label="Next page: JSONPlaceholderのAPIを簡単に確認"><i class="fa fa-angle-right"></i></a>
+        <a href="../doc/use_jsonplaceholder_with_chrome.html" class="navigation navigation-next " aria-label="Next page: JSONPlaceholderとは？"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

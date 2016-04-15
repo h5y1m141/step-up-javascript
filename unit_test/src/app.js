@@ -3,7 +3,7 @@ var jsonPlaceHolder = new JsonPlaceHolder();
 $('#listResources').on('click', function(){
   var promise, 
       items = [];
-  promise = jsonPlaceHolder.posts.index();
+  promise = jsonPlaceHolder.post.index();
   promise.done(function(response){
     $.each(response, function(index, item) {
       items.push('<li>' + 'ID：'
@@ -20,7 +20,7 @@ $('#showResource').on('click', function(){
   var promise,
       items = [],
       id = ($('#postsID')) ? $('#postsID').val() : 1;
-  promise = jsonPlaceHolder.posts.show(id);
+  promise = jsonPlaceHolder.post.show(id);
   promise.done(function(item){
     items.push('<li>' + 'ID：'
                + item.id
