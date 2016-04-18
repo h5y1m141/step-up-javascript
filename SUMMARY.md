@@ -24,6 +24,7 @@
         * [投稿情報一覧を取得する処理を実装する](doc/jsonplaceholder_02.md)
         * [特定の投稿情報を取得する処理を実装する](doc/jsonplaceholder_03.md)
         * [APIアクセス部分をリファクタリング](doc/jsonplaceholder_refactoring.md)
+        * [投稿を作成する処理を実装する](doc/jsonplaceholder_04.md)
 * [付録](doc/appendix/README.md)
     * [変数について](doc/appendix/javascript_variables.md)
     * [if文について](doc/appendix/javascript_if.md)
