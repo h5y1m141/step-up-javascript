@@ -37,7 +37,7 @@
         
     
     
-    <link rel="next" href="../doc/appendix/index.html" />
+    <link rel="next" href="../doc/jsonplaceholder_04.html" />
     
     
     <link rel="prev" href="../doc/jsonplaceholder_03.html" />
@@ -53,7 +53,7 @@
         data-chapter-title="APIアクセス部分をリファクタリング"
         data-filepath="doc/jsonplaceholder_refactoring.md"
         data-basepath=".."
-        data-revision="Sat Apr 16 2016 08:38:17 GMT+0900 (JST)"
+        data-revision="Mon Apr 18 2016 19:45:43 GMT+0900 (JST)"
         data-innerlanguage="">
     
 
@@ -468,6 +468,21 @@
             
         </li>
     
+        <li class="chapter " data-level="2.3.7" data-path="doc/jsonplaceholder_04.html">
+            
+                
+                    <a href="../doc/jsonplaceholder_04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.7.</b>
+                        
+                        投稿を作成する処理を実装する
+                    </a>
+            
+            
+        </li>
+    
 
             </ul>
             
@@ -678,7 +693,8 @@
       expect(jsonPlaceHolder.rootURL).toBeDefined();
     });
     it(<span class="hljs-string">&apos;&#x5024;&#x304C;&#x78BA;&#x8A8D;&#x3067;&#x304D;&#x308B;&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
-      expect(jsonPlaceHolder.rootURL).toBe(<span class="hljs-string">&apos;http://jsonplaceholder.typicode.com&apos;</span>);
+      <span class="hljs-keyword">var</span> expectURL = <span class="hljs-string">&apos;http://jsonplaceholder.typicode.com&apos;</span>;
+      expect(jsonPlaceHolder.rootURL).toBe(expectURL);
     });
   });
   describe(<span class="hljs-string">&apos;Post&#x306B;&#x3064;&#x3044;&#x3066;&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
@@ -687,15 +703,17 @@
         {id: <span class="hljs-number">1</span>, title: <span class="hljs-string">&apos;title1&apos;</span>, body: <span class="hljs-string">&apos;body1&apos;</span> },
         {id: <span class="hljs-number">2</span>, title: <span class="hljs-string">&apos;title2&apos;</span>, body: <span class="hljs-string">&apos;body2&apos;</span> }
       ];
-      spyOn(jsonPlaceHolder.post, <span class="hljs-string">&apos;index&apos;</span>).and.callFake(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
-        <span class="hljs-keyword">var</span> deferred = $.Deferred();
-        deferred.resolve(fakeResult);
-        <span class="hljs-keyword">return</span> deferred.promise();
+      spyOn(jsonPlaceHolder.post, <span class="hljs-string">&apos;index&apos;</span>).and
+        .callFake(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+          <span class="hljs-keyword">var</span> deferred = $.Deferred();
+          deferred.resolve(fakeResult);
+          <span class="hljs-keyword">return</span> deferred.promise();
       });
-      spyOn(jsonPlaceHolder.post, <span class="hljs-string">&apos;show&apos;</span>).and.callFake(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
-        <span class="hljs-keyword">var</span> deferred = $.Deferred();
-        deferred.resolve(fakeResult[<span class="hljs-number">0</span>]);
-        <span class="hljs-keyword">return</span> deferred.promise();
+      spyOn(jsonPlaceHolder.post, <span class="hljs-string">&apos;show&apos;</span>).and
+        .callFake(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+          <span class="hljs-keyword">var</span> deferred = $.Deferred();
+          deferred.resolve(fakeResult[<span class="hljs-number">0</span>]);
+          <span class="hljs-keyword">return</span> deferred.promise();
       });
     });
     describe(<span class="hljs-string">&apos;index&#x306B;&#x3064;&#x3044;&#x3066;&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
@@ -729,6 +747,8 @@
   });
 });
 </code></pre>
+<div style="page-break-before: always"></div>
+
 <h4 id="srcjsonplaceholderjs">src/jsonPlaceHolder.js</h4>
 <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> JsonPlaceHolder = (<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
   <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Post</span>(<span class="hljs-params">rootURL</span>)</span>{
@@ -757,6 +777,8 @@
   <span class="hljs-keyword">return</span> JsonPlaceHolder;
 })();
 </code></pre>
+<div style="page-break-before: always"></div>
+
 <h3 id="&#x3053;&#x306E;&#x6BB5;&#x968E;&#x3067;&#x6C17;&#x306B;&#x306A;&#x308B;&#x7B87;&#x6240;">&#x3053;&#x306E;&#x6BB5;&#x968E;&#x3067;&#x6C17;&#x306B;&#x306A;&#x308B;&#x7B87;&#x6240;</h3>
 <p>&#x4E0A;&#x8A18;&#x30B3;&#x30FC;&#x30C9;&#x306E;&#x30B3;&#x30E1;&#x30F3;&#x30C8;&#x306E;<strong>(*&#x91CD;&#x8907;)</strong>&#x306E;&#x7B87;&#x6240;&#x304C;&#x6C17;&#x306B;&#x306A;&#x308B;&#x306E;&#x3067;&#x3053;&#x3053;&#x3092;&#x30EA;&#x30D5;&#x30A1;&#x30AF;&#x30BF;&#x30EA;&#x30F3;&#x30B0;&#x3057;&#x307E;&#x3059;&#x3002;</p>
 <p>&#x3069;&#x306E;&#x3088;&#x3046;&#x306B;&#x3059;&#x308B;&#x304B;&#x3068;&#x3044;&#x3046;&#x3068;</p>
@@ -768,6 +790,8 @@
 </li>
 </ul>
 <p>&#x3068;&#x3044;&#x3046;&#x3053;&#x3068;&#x3092;&#x8003;&#x3048;&#x307E;&#x3059;&#x3002;</p>
+<div style="page-break-before: always"></div>
+
 <h3 id="&#x4E0A;&#x8A18;&#x306E;&#x4ED5;&#x69D8;&#x3092;&#x3075;&#x307E;&#x3048;&#x3066;&#x30C6;&#x30B9;&#x30C8;&#x3092;&#x4FEE;&#x6B63;">&#x4E0A;&#x8A18;&#x306E;&#x4ED5;&#x69D8;&#x3092;&#x3075;&#x307E;&#x3048;&#x3066;&#x30C6;&#x30B9;&#x30C8;&#x3092;&#x4FEE;&#x6B63;</h3>
 <p>&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306B;&#x4FEE;&#x6B63;&#x3057;&#x307E;&#x3059;&#x3002;</p>
 <p>&#x4ECA;&#x56DE;&#x306E;&#x4E00;&#x756A;&#x306E;&#x30DD;&#x30A4;&#x30F3;&#x30C8;&#x306F;&#x3001;&#x4EE5;&#x4E0B;&#x30B3;&#x30FC;&#x30C9;&#x306E;(1)&#x306E;&#x7B87;&#x6240;&#x306E;toHaveBeenCalled&#x3067;&#x3059;&#x3002;</p>
@@ -787,7 +811,8 @@
       expect(jsonPlaceHolder.rootURL).toBeDefined();
     });
     it(<span class="hljs-string">&apos;&#x5024;&#x304C;&#x78BA;&#x8A8D;&#x3067;&#x304D;&#x308B;&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
-      expect(jsonPlaceHolder.rootURL).toBe(<span class="hljs-string">&apos;http://jsonplaceholder.typicode.com&apos;</span>);
+      <span class="hljs-keyword">var</span> expectURL = <span class="hljs-string">&apos;http://jsonplaceholder.typicode.com&apos;</span>;
+      expect(jsonPlaceHolder.rootURL).toBe(expectURL);
     });
   });
   describe(<span class="hljs-string">&apos;Post&#x306B;&#x3064;&#x3044;&#x3066;&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
@@ -810,15 +835,17 @@
           {id: <span class="hljs-number">1</span>, title: <span class="hljs-string">&apos;title1&apos;</span>, body: <span class="hljs-string">&apos;body1&apos;</span> },
           {id: <span class="hljs-number">2</span>, title: <span class="hljs-string">&apos;title2&apos;</span>, body: <span class="hljs-string">&apos;body2&apos;</span> }
         ];
-        spyOn(jsonPlaceHolder.post, <span class="hljs-string">&apos;index&apos;</span>).and.callFake(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
-          <span class="hljs-keyword">var</span> deferred = $.Deferred();
-          deferred.resolve(fakeResult);
-          <span class="hljs-keyword">return</span> deferred.promise();
+        spyOn(jsonPlaceHolder.post, <span class="hljs-string">&apos;index&apos;</span>).and
+          .callFake(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+            <span class="hljs-keyword">var</span> deferred = $.Deferred();
+            deferred.resolve(fakeResult);
+            <span class="hljs-keyword">return</span> deferred.promise();
         });
-        spyOn(jsonPlaceHolder.post, <span class="hljs-string">&apos;show&apos;</span>).and.callFake(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
-          <span class="hljs-keyword">var</span> deferred = $.Deferred();
-          deferred.resolve(fakeResult[<span class="hljs-number">0</span>]);
-          <span class="hljs-keyword">return</span> deferred.promise();
+        spyOn(jsonPlaceHolder.post, <span class="hljs-string">&apos;show&apos;</span>).and
+          .callFake(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+            <span class="hljs-keyword">var</span> deferred = $.Deferred();
+            deferred.resolve(fakeResult[<span class="hljs-number">0</span>]);
+            <span class="hljs-keyword">return</span> deferred.promise();
         });
       });
       describe(<span class="hljs-string">&apos;index&#x306B;&#x3064;&#x3044;&#x3066;&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
@@ -853,6 +880,8 @@
   });
 });
 </code></pre>
+<div style="page-break-before: always"></div>
+
 <h4 id="&#x53C2;&#x8003;&#x307E;&#x3067;&#x306B;nodetwitter&#x306E;&#x69CB;&#x9020;&#x3092;&#x7D39;&#x4ECB;">&#x53C2;&#x8003;&#x307E;&#x3067;&#x306B;node-twitter&#x306E;&#x69CB;&#x9020;&#x3092;&#x7D39;&#x4ECB;</h4>
 <p>&#x4ECA;&#x56DE;&#x306E;&#x3088;&#x3046;&#x306A;WebAPI&#x3068;&#x9023;&#x643A;&#x3059;&#x308B;&#x30AF;&#x30E9;&#x30B9;&#x3092;&#x4F5C;&#x308B;&#x5834;&#x5408;&#x306F;</p>
 <ul>
@@ -952,7 +981,7 @@ Twitter.prototype.__request = <span class="hljs-function"><span class="hljs-keyw
         <a href="../doc/jsonplaceholder_03.html" class="navigation navigation-prev " aria-label="Previous page: 特定の投稿情報を取得する処理を実装する"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../doc/appendix/index.html" class="navigation navigation-next " aria-label="Next page: 付録"><i class="fa fa-angle-right"></i></a>
+        <a href="../doc/jsonplaceholder_04.html" class="navigation navigation-next " aria-label="Next page: 投稿を作成する処理を実装する"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

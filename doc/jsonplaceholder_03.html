@@ -53,7 +53,7 @@
         data-chapter-title="特定の投稿情報を取得する処理を実装する"
         data-filepath="doc/jsonplaceholder_03.md"
         data-basepath=".."
-        data-revision="Sat Apr 16 2016 08:38:17 GMT+0900 (JST)"
+        data-revision="Mon Apr 18 2016 19:45:43 GMT+0900 (JST)"
         data-innerlanguage="">
     
 
@@ -468,6 +468,21 @@
             
         </li>
     
+        <li class="chapter " data-level="2.3.7" data-path="doc/jsonplaceholder_04.html">
+            
+                
+                    <a href="../doc/jsonplaceholder_04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.7.</b>
+                        
+                        投稿を作成する処理を実装する
+                    </a>
+            
+            
+        </li>
+    
 
             </ul>
             
@@ -767,15 +782,17 @@ TOTAL: <span class="hljs-number">1</span> FAILED, <span class="hljs-number">5</s
         {id: <span class="hljs-number">1</span>, title: <span class="hljs-string">&apos;title1&apos;</span>, body: <span class="hljs-string">&apos;body1&apos;</span> },
         {id: <span class="hljs-number">2</span>, title: <span class="hljs-string">&apos;title2&apos;</span>, body: <span class="hljs-string">&apos;body2&apos;</span> }
       ];  <span class="hljs-comment">// &#xFF08;*1&#xFF09;</span>
-      spyOn(jsonPlaceHolder.post, <span class="hljs-string">&apos;index&apos;</span>).and.callFake(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
-        <span class="hljs-keyword">var</span> deferred = $.Deferred();
-        deferred.resolve(fakeResult);
-        <span class="hljs-keyword">return</span> deferred.promise();
+      spyOn(jsonPlaceHolder.post, <span class="hljs-string">&apos;index&apos;</span>).and
+        .callFake(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+          <span class="hljs-keyword">var</span> deferred = $.Deferred();
+          deferred.resolve(fakeResult);
+          <span class="hljs-keyword">return</span> deferred.promise();
       });
-      spyOn(jsonPlaceHolder.post, <span class="hljs-string">&apos;show&apos;</span>).and.callFake(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
-        <span class="hljs-keyword">var</span> deferred = $.Deferred();
-        deferred.resolve(fakeResult[<span class="hljs-number">0</span>]);
-        <span class="hljs-keyword">return</span> deferred.promise();
+      spyOn(jsonPlaceHolder.post, <span class="hljs-string">&apos;show&apos;</span>).and
+        .callFake(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+          <span class="hljs-keyword">var</span> deferred = $.Deferred();
+          deferred.resolve(fakeResult[<span class="hljs-number">0</span>]);
+          <span class="hljs-keyword">return</span> deferred.promise();
       });
     });
     describe(<span class="hljs-string">&apos;index&#x306B;&#x3064;&#x3044;&#x3066;&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
