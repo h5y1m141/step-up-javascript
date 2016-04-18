@@ -34,8 +34,9 @@ http://192.168.33.39:9877/
 
 にアクセスすると、以下の様な画面が表示されるはずです
 
-![2016-04-08 17 47 16](https://cloud.githubusercontent.com/assets/950924/14378802/0f37f8a6-fdb2-11e5-8921-2d82e66c7a38.png)
+![Karma起動画面](images/karma_start.png)
 
+<div style="page-break-before: always"></div>
 
 この段階ではテスト対象となる記述が全く無い状態なので、本来は意味がないのですが以下の様な内容を書いてみます
 

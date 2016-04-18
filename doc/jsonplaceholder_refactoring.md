@@ -20,7 +20,8 @@ describe('JsonPlaceHolder', function() {
       expect(jsonPlaceHolder.rootURL).toBeDefined();
     });
     it('値が確認できる', function(){
-      expect(jsonPlaceHolder.rootURL).toBe('http://jsonplaceholder.typicode.com');
+      var expectURL = 'http://jsonplaceholder.typicode.com';
+      expect(jsonPlaceHolder.rootURL).toBe(expectURL);
     });
   });
   describe('Postについて', function() {
@@ -29,15 +30,17 @@ describe('JsonPlaceHolder', function() {
         {id: 1, title: 'title1', body: 'body1' },
         {id: 2, title: 'title2', body: 'body2' }
       ];
-      spyOn(jsonPlaceHolder.post, 'index').and.callFake(function(){
-        var deferred = $.Deferred();
-        deferred.resolve(fakeResult);
-        return deferred.promise();
+      spyOn(jsonPlaceHolder.post, 'index').and
+        .callFake(function(){
+          var deferred = $.Deferred();
+          deferred.resolve(fakeResult);
+          return deferred.promise();
       });
-      spyOn(jsonPlaceHolder.post, 'show').and.callFake(function(){
-        var deferred = $.Deferred();
-        deferred.resolve(fakeResult[0]);
-        return deferred.promise();
+      spyOn(jsonPlaceHolder.post, 'show').and
+        .callFake(function(){
+          var deferred = $.Deferred();
+          deferred.resolve(fakeResult[0]);
+          return deferred.promise();
       });
     });
     describe('indexについて', function() {
@@ -72,6 +75,8 @@ describe('JsonPlaceHolder', function() {
 });
 ```
 
+<div style="page-break-before: always"></div>
+
 #### src/jsonPlaceHolder.js
 
 ```javascript
@@ -103,6 +108,7 @@ var JsonPlaceHolder = (function(){
 })();
 ```
 
+<div style="page-break-before: always"></div>
 
 ### この段階で気になる箇所
 
@@ -116,6 +122,7 @@ var JsonPlaceHolder = (function(){
   
 ということを考えます。
 
+<div style="page-break-before: always"></div>
 
 ### 上記の仕様をふまえてテストを修正
 
@@ -142,7 +149,8 @@ describe('JsonPlaceHolder', function() {
       expect(jsonPlaceHolder.rootURL).toBeDefined();
     });
     it('値が確認できる', function(){
-      expect(jsonPlaceHolder.rootURL).toBe('http://jsonplaceholder.typicode.com');
+      var expectURL = 'http://jsonplaceholder.typicode.com';
+      expect(jsonPlaceHolder.rootURL).toBe(expectURL);
     });
   });
   describe('Postについて', function() {
@@ -165,15 +173,17 @@ describe('JsonPlaceHolder', function() {
           {id: 1, title: 'title1', body: 'body1' },
           {id: 2, title: 'title2', body: 'body2' }
         ];
-        spyOn(jsonPlaceHolder.post, 'index').and.callFake(function(){
-          var deferred = $.Deferred();
-          deferred.resolve(fakeResult);
-          return deferred.promise();
+        spyOn(jsonPlaceHolder.post, 'index').and
+          .callFake(function(){
+            var deferred = $.Deferred();
+            deferred.resolve(fakeResult);
+            return deferred.promise();
         });
-        spyOn(jsonPlaceHolder.post, 'show').and.callFake(function(){
-          var deferred = $.Deferred();
-          deferred.resolve(fakeResult[0]);
-          return deferred.promise();
+        spyOn(jsonPlaceHolder.post, 'show').and
+          .callFake(function(){
+            var deferred = $.Deferred();
+            deferred.resolve(fakeResult[0]);
+            return deferred.promise();
         });
       });
       describe('indexについて', function() {
@@ -208,6 +218,8 @@ describe('JsonPlaceHolder', function() {
   });
 });
 ```
+
+<div style="page-break-before: always"></div>
 
 #### 参考までにnode-twitterの構造を紹介
 

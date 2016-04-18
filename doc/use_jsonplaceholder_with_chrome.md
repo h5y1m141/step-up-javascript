@@ -17,6 +17,8 @@ JSONPlaceholderはサインアップ不要で、利用できます。
 
 実際にプログラムを書く前にまずはJSONPlaceholderのAPIを利用することでどんな情報が取得できるかブラウザを通じて動作確認してみたいと思います。
 
+<div style="page-break-before: always"></div>
+
 ### 投稿（Post）情報一覧を取得する
 
 まずは以下URLにアクセスします。
@@ -27,6 +29,7 @@ http://jsonplaceholder.typicode.com/posts
 
 ![Jasmine公式ドキュメントのキャプチャ](images/jsonplaceholder_via_chrome.png)
 
+<div style="page-break-before: always"></div>
 
 ### コメント（Comment)一覧を取得する
 

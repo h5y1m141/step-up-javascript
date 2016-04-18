@@ -1,6 +1,6 @@
 ## 実装するクラスの仕様を考える
 
-実装をする前に、まずはJSONPlaceholderクラスの仕様を考えてみたいと思います。
+実装をする前にまずはJSONPlaceholderクラスの仕様を考えてみたいと思います。
 
 
 JSONPlaceholderのWebAPIは
@@ -16,13 +16,25 @@ JSONPlaceholderのWebAPIは
 
 なるべくこの構造を維持したクラスが定義できると、自分自身だけではなく他の人からも利用する時にイメージしやすい構造になるかと思います。
 
-そのため
+### 概念図
+
+今回実装するクラスと、JSONPlaceholderのWebAPI通じて処理するリソースとの対応関係としてこのような対応関係になることをイメージしてます。
+
+![クラスとWebAPIとの対応関係](images/StepUpJavaScriptTestingFramework.005.png)
+
+
+### 実装予定のクラスのインターフェースを考える
+
+実装予定のクラスを
 
 ```javascript
 var jsonPlaceHolder = new JsonPlaceHolder();
 ```
 
-とした後に、例えば投稿情報に対する処理に対しては
+とした後に例えば投稿情報に対する処理に対しては以下の様なことが行えることを仕様として定義したいと思います。
+
+
+#### 投稿情報（Posts）に対する一連の操作
 
 ```javascript
 var id = 1,
@@ -31,14 +43,21 @@ var id = 1,
       title: 'タイトル',
       body: '本文'
     };
-jsonPlaceHolder.post.index();              // 一覧を取得
-jsonPlaceHolder.post.show(id);             // 指定したIDの投稿情報を取得
-jsonPlaceHolder.post.create(postData);     // 投稿情報を作成
-jsonPlaceHolder.post.update(id, postData); // 指定したIDの投稿情報を更新
-jsonPlaceHolder.post.destroy(id);          // 指定したIDの投稿情報を削除
+jsonPlaceHolder.post.index();              // (1)
+jsonPlaceHolder.post.show(id);             // (2)
+jsonPlaceHolder.post.create(postData);     // (3)
+jsonPlaceHolder.post.update(id, postData); // (4)
+jsonPlaceHolder.post.destroy(id);          // (5)
 ```
+1. 一覧を取得
+2. 指定したIDの投稿情報を取得
+3. 投稿情報を作成
+4. 指定したIDの投稿情報を更新
+5. 指定したIDの投稿情報を削除
 
-という形で行えて、コメント情報に対する処理に対しては
+#### コメント（Comments）に対する一連の操作
+
+コメント情報に対する処理に対しては以下の様なことが行えることを仕様として定義したいと思います。
 
 ```javascript
 var id = 1,
@@ -47,13 +66,18 @@ var id = 1,
       title: 'タイトル',
       body: '本文'
     };
-jsonPlaceHolder.comments.index();              // 一覧を取得
-jsonPlaceHolder.comments.show(id);             // 指定したIDのコメントを取得
-jsonPlaceHolder.comments.create(postData);     // コメントを作成
-jsonPlaceHolder.comments.update(id, postData); // 指定したIDのコメントを更新
-jsonPlaceHolder.comments.destroy(id);          // 指定したIDのコメントを削除
+jsonPlaceHolder.comments.index();              // (1)
+jsonPlaceHolder.comments.show(id);             // (2)
+jsonPlaceHolder.comments.create(postData);     // (3)
+jsonPlaceHolder.comments.update(id, postData); // (4)
+jsonPlaceHolder.comments.destroy(id);          // (5)
 ```
 
-が行えると理想的かと思うのでこういう処理が行えることを仕様として定義したいと思います。
+1. 一覧を取得
+2. 指定したIDのコメントを取得
+3. コメントを作成
+4. 指定したIDのコメントを更新
+5. 指定したIDのコメントを削除
+
 
 なお、今回は、時間の都合もあって特定のリソース（投稿情報）の対しての説明だけになります。

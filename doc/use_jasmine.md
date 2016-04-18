@@ -4,18 +4,18 @@
 
 ## はじめに最初に作るツールの仕様について
 
-簡単に仕様についてまとめておきます
+簡単に仕様についてまとめておきます。Gistクラスを定義するファイル名はひとまずgist.jsとします。
 
 - Gistという名前のクラス
 - そのクラスにはfetch()というメソッドが定義されてる
 - fetch()メソッドを実行するとあらかじめ設定済のURLからJSONの情報を取得することが出来る
 
-Gistクラスが定義されてるファイル名をひとまずgist.jsとしておきます
-
-### fetch()について補足
+### fetchメソッドについて補足
 
 - サーバーとの通信になるので非同期での処理を想定しており
 - 通信処理が正常に完了した場合にdone()というコールバック関数が呼ばれることを想定してます
+
+<div style="page-break-before: always"></div>
 
 ### 最終的に実装されるgist.js
 
@@ -26,11 +26,12 @@ var promise,
       gist = new Gist();
 promise = gist.fetch();
 promise.done(function(response){
-  console.log(response)  // gistにアクセスした結果が得られて、JSON.parse(response)してJSONとして扱えるようになる
+  console.log(response)  // (1) 
 });
 ```
 
-という感じにすることで、gistの通信処理機能が利用できるようになります
+という感じにすることでgistの通信処理機能が利用できるようになります。
+なお、コード中の（1）の箇所でgistにアクセスした結果が得られてJSON.parse(response)してJSONとして扱えるようになる
 
 ## 実際にテストを書きながら作業を進めてみる
 
@@ -68,4 +69,4 @@ http://192.168.33.39:9877/
 
 にアクセスすると、以下の様な画面が表示されるはずです
 
-![2016-04-08 17 47 16](https://cloud.githubusercontent.com/assets/950924/14378802/0f37f8a6-fdb2-11e5-8921-2d82e66c7a38.png)
+![Karma起動画面](images/karma_start.png)

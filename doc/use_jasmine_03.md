@@ -23,8 +23,9 @@ var Gist = (function() {
 JavaScriptとPHPでのクラス定義を対比させてみた #12 
 https://github.com/h5y1m141/step-up-javascript/issues/12
 
+<div style="page-break-before: always"></div>
 
-### fetch()メソッドを仮実装した理由
+### fetchメソッドを仮実装した理由
 
 先ほどのコードで
 

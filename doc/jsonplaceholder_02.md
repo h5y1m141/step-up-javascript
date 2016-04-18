@@ -5,7 +5,7 @@
 
 ### まずはindexメソッドが定義されてるテストを書く
 
-少し周りくどいかもしれませんが、まずはindex()メソッドが定義されてるテストを書くことにします。
+少し周りくどいかもしれませんが、まずはindexメソッドが定義されてるテストを書くことにします。
 
 specディレクトリのjsonPlaceHolder_spec.jsを以下のように修正します
 
@@ -47,10 +47,11 @@ Chrome 49.0.2623 (Mac OS X 10.10.5): Executed 5 of 5 (1 FAILED) (0.608 secs / 0.
 TOTAL: 1 FAILED, 4 SUCCESS
 ```
 
+<div style="page-break-before: always"></div>
 
-### テストに通るようにindex()をまずは仮実装する
+### テストに通るようにindexメソッドを仮実装する
 
-ひとまずindex()が定義されてるというテストが通ればOKなので、index()のロジックは気にせずひとまず以下のように実装します
+ひとまずindexメソッドが定義されてるというテストが通ればOKなのでロジックは気にせずひとまず以下のように実装します
 
 ```javascript
 var JsonPlaceHolder = (function(){
@@ -65,9 +66,10 @@ var JsonPlaceHolder = (function(){
   return JsonPlaceHolder;
 })();
 ```
+
 #### indexの実装上のポイント
 
-上記コードのポイントになる箇所を順番に説明します
+上記コードのポイントになる箇所を順番に説明します。
 
 1. JsonPlaceHolderの子となるオブジェクトがindex()などのメソッドを持つような構造にしたいので、JsonPlaceHolder内部で新たにPostというクラスを定義するためにこのように書きます。
 2. ひとまずこの段階ではindex()の細かいロジックは無視して仮にtrueを返すようにします。
@@ -75,7 +77,8 @@ var JsonPlaceHolder = (function(){
 
 ```javascript
 var jsonPlaceHolder = new JsonPlaceHolder();
-jsonPlaceHolder.post.index();  // 実際にはPost.prototype.indexの箇所が実行される
+// 実際にはPost.prototype.indexの箇所が実行される
+jsonPlaceHolder.post.index();
 ```
 
 上記のように実装するとテスト結果は以下のようにパスします
@@ -105,7 +108,8 @@ describe('JsonPlaceHolder', function() {
   //中略
   describe('Postについて', function() {
     beforeEach(function () {
-      spyOn(jsonPlaceHolder.post, 'index').and.callFake(function(){
+      spyOn(jsonPlaceHolder.post, 'index').and
+        .callFake(function(){
         var fakeResult = [
           { id: 1, title: 'title1', body: 'body1'},
           { id: 2, title: 'title2', body: 'body2'}
@@ -213,8 +217,9 @@ describe('JsonPlaceHolder', function() {
   });
   describe('Postについて', function() {
     beforeEach(function () {      
-      spyOn(jsonPlaceHolder.post, 'index').and.callFake(function(){
-        var fakeResult =             [
+      spyOn(jsonPlaceHolder.post, 'index').and
+        .callFake(function(){
+        var fakeResult = [
           {id: 1, title: 'title1', body: 'body1' },
           {id: 2, title: 'title2', body: 'body2' }
         ];

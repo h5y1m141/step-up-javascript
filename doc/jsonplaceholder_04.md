@@ -127,23 +127,26 @@ describe('JsonPlaceHolder', function() {
           {id: 1, title: 'title1', body: 'body1' },
           {id: 2, title: 'title2', body: 'body2' }
         ];
-        spyOn(jsonPlaceHolder.post, 'index').and.callFake(function(){
-          var deferred = $.Deferred();
-          deferred.resolve(fakeResult);
-          return deferred.promise();
+        spyOn(jsonPlaceHolder.post, 'index').and
+          .callFake(function(){
+            var deferred = $.Deferred();
+            deferred.resolve(fakeResult);
+            return deferred.promise();
         });
-        spyOn(jsonPlaceHolder.post, 'show').and.callFake(function(){
-          var deferred = $.Deferred();
-          deferred.resolve(fakeResult[0]);
-          return deferred.promise();
+        spyOn(jsonPlaceHolder.post, 'show').and
+          .callFake(function(){
+            var deferred = $.Deferred();
+            deferred.resolve(fakeResult[0]);
+            return deferred.promise();
         });
         // 以下を追加
-        spyOn(jsonPlaceHolder.post, 'create').and.callFake(function(param){
-          var deferred = $.Deferred();
-          // 基本的には引数に渡したparamオブジェクトがそのまま返ってくる仕様のようなので
-          // resolveにはparamオブジェクトをひとまずそのまま指定します
-          deferred.resolve(param);
-          return deferred.promise();
+        spyOn(jsonPlaceHolder.post, 'create').and
+          .callFake(function(param){
+            var deferred = $.Deferred();
+            // 基本的には引数に渡したparamオブジェクトがそのまま返ってくる仕様のようなので
+            // resolveにはparamオブジェクトをひとまずそのまま指定します
+            deferred.resolve(param);
+            return deferred.promise();
         });
         describe('indexについて', function() {
           // 省略
