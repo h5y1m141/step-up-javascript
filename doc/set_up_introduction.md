@@ -25,7 +25,7 @@ GitHubから必要なファイルをダウンロードしたら、それぞれ�
 
 ### Node.jsの環境を全く作ったことが無い方
 
-[Vagrant環境を利用して環境を構築する](doc/set_up_vagrant.md)を参考にして、Vagrant環境での構築方法を参考に準備をお願いします。
+[Vagrant環境を利用して環境を構築する](set_up_vagrant.md)を参考にして、Vagrant環境での構築方法を参考に準備をお願いします。
 
 ### 普段からNode.js環境を利用してる方
 
@@ -37,4 +37,4 @@ npm install
 
 を実施すればOKです。
 
-[Mac/Windows上でNode.jsの環境を利用する](doc/set_up_vagrant.md)参考に準備をお願いします。
+[Mac/Windows上でNode.jsの環境を利用する](set_up_vagrant.md)参考に準備をお願いします。
