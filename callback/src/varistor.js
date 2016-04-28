@@ -12,7 +12,7 @@ var Varistor = (function(){
   };
   Varistor.prototype.callCustomer = function(){
     $('.operation').append(this.brendCoffee + 'ご注文のお客様、おまちどうさまでした！');
-    $('.operation').append('<br />');
+    $('.operation').append('<hr />');
   };
   return Varistor;
 })();

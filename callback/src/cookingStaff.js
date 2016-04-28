@@ -12,7 +12,7 @@ var CookingStaff = (function(){
   };
   CookingStaff.prototype.callCustomer = function(){
     $('.operation').append(this.MilanoSandwichA + 'ご注文のお客様、おまちどうさまでした！');
-    $('.operation').append('<br />');
+    $('.operation').append('<hr />');
   };
   return CookingStaff;
 })();
