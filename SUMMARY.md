@@ -8,6 +8,8 @@
     * [非同期処理について](doc/understanding_javascript/async_01.md)
       * [非同期処理の概念について解説](doc/understanding_javascript/async_02.md)
       * [サンプルコードを通じて非同期処理について理解する](doc/understanding_javascript/async_03.md)
+        * [非同期処理を考慮しない書き方](doc/understanding_javascript/async_04.md)
+        * [非同期処理を考慮する形に書き換える](doc/understanding_javascript/async_05.md)
 * [WebAPIと連携する処理に対してどのようにテストを書くか](doc/integrate_web_api.md)
     * [Jasmineについて](doc/about_jasmine.md)
         * [テストを書く上で必要な構成要素](doc/about_jasmine_01.md)
