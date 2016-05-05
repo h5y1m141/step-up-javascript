@@ -1,8 +1,7 @@
 # 目次
 
 * [講座で利用する環境を構築する](doc/set_up_introduction.md)
-    * [Vagrant環境を利用して環境を構築する](doc/set_up_vagrant.md)
-        * [Vagrant環境構築中にエラーになる場合](doc/fail_to_set_up_vagrant.md)
+    * [Cloud9というクラウド上の環境を利用する](doc/set_up_cloud9.md)
     * [Mac/Windows上でNode.jsの環境を利用する](doc/set_up_with_node.md)
 * [JavaScriptのわかりづらい概念について学ぶ](doc/understanding_javascript/index.md)
     * [非同期処理について](doc/understanding_javascript/async_01.md)
