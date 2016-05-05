@@ -37,7 +37,7 @@
         
     
     
-    <link rel="next" href="../doc/set_up_vagrant.html" />
+    <link rel="next" href="../doc/set_up_cloud9.html" />
     
     
     <link rel="prev" href="../index.html" />
@@ -53,7 +53,7 @@
         data-chapter-title="講座で利用する環境を構築する"
         data-filepath="doc/set_up_introduction.md"
         data-basepath=".."
-        data-revision="Thu May 05 2016 16:03:47 GMT+0900 (JST)"
+        data-revision="Thu May 05 2016 17:10:51 GMT+0900 (JST)"
         data-innerlanguage="">
     
 
@@ -98,39 +98,18 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.1" data-path="doc/set_up_vagrant.html">
+        <li class="chapter " data-level="1.1" data-path="doc/set_up_cloud9.html">
             
                 
-                    <a href="../doc/set_up_vagrant.html">
+                    <a href="../doc/set_up_cloud9.html">
                 
                         <i class="fa fa-check"></i>
                         
                             <b>1.1.</b>
                         
-                        Vagrant環境を利用して環境を構築する
+                        Cloud9というクラウド上の環境を利用する
                     </a>
             
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.1.1" data-path="doc/fail_to_set_up_vagrant.html">
-            
-                
-                    <a href="../doc/fail_to_set_up_vagrant.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>1.1.1.</b>
-                        
-                        Vagrant環境構築中にエラーになる場合
-                    </a>
-            
-            
-        </li>
-    
-
-            </ul>
             
         </li>
     
@@ -792,7 +771,7 @@
 <p>&#x3084;&#x3063;&#x3066;&#x3044;&#x305F;&#x3060;&#x304F;&#x4F5C;&#x696D;&#x306F;</p>
 <ol>
 <li>GitHub&#x304B;&#x3089;&#x5FC5;&#x8981;&#x306A;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x4E00;&#x5F0F;&#x3092;&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;</li>
-<li>Vagrant&#x74B0;&#x5883;&#x3001;&#x3082;&#x3057;&#x304F;&#x306F;&#x666E;&#x6BB5;&#x304B;&#x3089;Node.js&#x74B0;&#x5883;&#x3092;&#x4F7F;&#x3063;&#x3066;&#x308B;&#x65B9;&#x306F;&#x305D;&#x3061;&#x3089;&#x306E;&#x74B0;&#x5883;&#x3092;&#x5229;&#x7528;&#x3057;&#x305F;&#x74B0;&#x5883;&#x69CB;&#x7BC9;</li>
+<li>Cloud9&#x3068;&#x3044;&#x3046;&#x30AF;&#x30E9;&#x30A6;&#x30C9;&#x4E0A;&#x306E;&#x74B0;&#x5883;&#x3092;&#x5229;&#x7528;&#x3059;&#x308B;&#x3001;&#x3082;&#x3057;&#x304F;&#x306F;&#x666E;&#x6BB5;&#x304B;&#x3089;Node.js&#x74B0;&#x5883;&#x3092;&#x4F7F;&#x3063;&#x3066;&#x308B;&#x65B9;&#x306F;&#x305D;&#x3061;&#x3089;&#x306E;&#x74B0;&#x5883;&#x3092;&#x5229;&#x7528;&#x3057;&#x305F;&#x74B0;&#x5883;&#x69CB;&#x7BC9;</li>
 </ol>
 <p>&#x306E;&#x4F5C;&#x696D;&#x3092;&#x304A;&#x9858;&#x3044;&#x3057;&#x307E;&#x3059;</p>
 <h2 id="github&#x304B;&#x3089;&#x5FC5;&#x8981;&#x306A;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x4E00;&#x5F0F;&#x3092;&#x53D6;&#x308A;&#x8FBC;&#x3080;">GitHub&#x304B;&#x3089;&#x5FC5;&#x8981;&#x306A;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x4E00;&#x5F0F;&#x3092;&#x53D6;&#x308A;&#x8FBC;&#x3080;</h2>
@@ -803,13 +782,14 @@
 <p>JavaScript&#x306E;&#x5B9F;&#x884C;&#x74B0;&#x5883;&#x3068;&#x3057;&#x3066;Node.js&#x3092;&#x60F3;&#x5B9A;&#x3057;&#x3066;&#x304A;&#x308A;&#x307E;&#x3059;&#x306E;&#x3067;&#x3001;&#x4EE5;&#x4E0B;&#x3044;&#x3065;&#x308C;&#x304B;&#x306E;&#x65B9;&#x6CD5;&#x3067;&#x74B0;&#x5883;&#x3092;&#x69CB;&#x7BC9;&#x3057;&#x3066;&#x304A;&#x3044;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;
 GitHub&#x304B;&#x3089;&#x5FC5;&#x8981;&#x306A;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;&#x3057;&#x305F;&#x3089;&#x3001;&#x305D;&#x308C;&#x305E;&#x308C;&#x306E;&#x74B0;&#x5883;&#x306B;&#x5FDC;&#x3058;&#x3066;&#x4EE5;&#x4E0B;&#x306E;&#x4F5C;&#x696D;&#x3092;&#x4E8B;&#x524D;&#x306B;&#x3057;&#x3066;&#x304A;&#x3044;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p>
 <h3 id="nodejs&#x306E;&#x74B0;&#x5883;&#x3092;&#x5168;&#x304F;&#x4F5C;&#x3063;&#x305F;&#x3053;&#x3068;&#x304C;&#x7121;&#x3044;&#x65B9;">Node.js&#x306E;&#x74B0;&#x5883;&#x3092;&#x5168;&#x304F;&#x4F5C;&#x3063;&#x305F;&#x3053;&#x3068;&#x304C;&#x7121;&#x3044;&#x65B9;</h3>
-<p><a href="set_up_vagrant.html">Vagrant&#x74B0;&#x5883;&#x3092;&#x5229;&#x7528;&#x3057;&#x3066;&#x74B0;&#x5883;&#x3092;&#x69CB;&#x7BC9;&#x3059;&#x308B;</a>&#x3092;&#x53C2;&#x8003;&#x306B;&#x3057;&#x3066;&#x3001;Vagrant&#x74B0;&#x5883;&#x3067;&#x306E;&#x69CB;&#x7BC9;&#x65B9;&#x6CD5;&#x3092;&#x53C2;&#x8003;&#x306B;&#x6E96;&#x5099;&#x3092;&#x304A;&#x9858;&#x3044;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+<p><a href="set_up_cloud9.html">Cloud9&#x3068;&#x3044;&#x3046;&#x30AF;&#x30E9;&#x30A6;&#x30C9;&#x4E0A;&#x306E;&#x74B0;&#x5883;&#x3092;&#x5229;&#x7528;&#x3059;&#x308B;</a>&#x3092;&#x53C2;&#x8003;&#x306B;&#x3057;&#x3066;&#x74B0;&#x5883;&#x3092;&#x69CB;&#x7BC9;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p>
+<p>&#x306A;&#x304A;&#x3001;Cloud9&#x4E0A;&#x3067;&#x306F;Node.js&#x306E;&#x5B9F;&#x884C;&#x74B0;&#x5883;&#x3060;&#x3051;&#x3067;&#x306F;&#x306A;&#x304F;&#x958B;&#x767A;&#x6642;&#x306E;&#x30A8;&#x30C7;&#x30A3;&#x30BF;&#x6A5F;&#x80FD;&#x3082;&#x5099;&#x308F;&#x3063;&#x3066;&#x307E;&#x3059;&#x3002;</p>
 <h3 id="&#x666E;&#x6BB5;&#x304B;&#x3089;nodejs&#x74B0;&#x5883;&#x3092;&#x5229;&#x7528;&#x3057;&#x3066;&#x308B;&#x65B9;">&#x666E;&#x6BB5;&#x304B;&#x3089;Node.js&#x74B0;&#x5883;&#x3092;&#x5229;&#x7528;&#x3057;&#x3066;&#x308B;&#x65B9;</h3>
 <p>&#x8B1B;&#x5EA7;&#x3092;&#x3059;&#x3059;&#x3081;&#x308B;&#x4E0A;&#x3067;&#x5FC5;&#x8981;&#x306A;npm&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#x304C;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3067;&#x304D;&#x308B;&#x3088;&#x3046;&#x306B;package.json&#x3092;&#x6E96;&#x5099;&#x3057;&#x3066;&#x3042;&#x308A;&#x307E;&#x3059;&#x306E;&#x3067;&#x3001;</p>
 <pre><code class="lang-sh">npm install
 </code></pre>
 <p>&#x3092;&#x5B9F;&#x65BD;&#x3059;&#x308C;&#x3070;OK&#x3067;&#x3059;&#x3002;</p>
-<p><a href="set_up_vagrant.html">Mac/Windows&#x4E0A;&#x3067;Node.js&#x306E;&#x74B0;&#x5883;&#x3092;&#x5229;&#x7528;&#x3059;&#x308B;</a>&#x53C2;&#x8003;&#x306B;&#x6E96;&#x5099;&#x3092;&#x304A;&#x9858;&#x3044;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+<p><a href="set_up_with_node.html">Mac/Windows&#x4E0A;&#x3067;Node.js&#x306E;&#x74B0;&#x5883;&#x3092;&#x5229;&#x7528;&#x3059;&#x308B;</a>&#x53C2;&#x8003;&#x306B;&#x6E96;&#x5099;&#x3092;&#x304A;&#x9858;&#x3044;&#x3057;&#x307E;&#x3059;&#x3002;</p>
 
                     
                     </section>
@@ -823,7 +803,7 @@ GitHub&#x304B;&#x3089;&#x5FC5;&#x8981;&#x306A;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#
         <a href="../index.html" class="navigation navigation-prev " aria-label="Previous page: Introduction"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../doc/set_up_vagrant.html" class="navigation navigation-next " aria-label="Next page: Vagrant環境を利用して環境を構築する"><i class="fa fa-angle-right"></i></a>
+        <a href="../doc/set_up_cloud9.html" class="navigation navigation-next " aria-label="Next page: Cloud9というクラウド上の環境を利用する"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
