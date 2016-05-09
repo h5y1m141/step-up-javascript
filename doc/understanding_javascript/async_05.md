@@ -22,7 +22,7 @@
 
   <div class="operation"></div>
   <script type="text/javascript" src='/node_modules/jquery/dist/jquery.js'></script>
-  <script type="text/javascript" src='src/main.js'></script>
+  <script type="text/javascript" src='/js/main.js'></script>
 </body>
 </html>
 ```
