@@ -1,0 +1,12 @@
+{
+  "name": "learn_async",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Hiroshi Oyamada",
+  "license": "MIT",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-webserver": "*",
+    "jquery": "^2.1.3"
+  }
+}
