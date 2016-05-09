@@ -1,26 +1,21 @@
 ## 非同期処理を考慮しない書き方
 
-まず、以下の様なHTMLを準備します。
+HTMLに以下を追加します
 
 ### index.html
 
 ```html
-<html>
-<head></head>
 <body>
   <button id="storeOperation">処理の順番が正しくない</button>
   <div class="customerRrequest"></div>
 
   <div class="operation"></div>
-  <script type="text/javascript" src='/node_modules/jquery/dist/jquery.js'></script>
-  <script type="text/javascript" src='src/main.js'></script>
-</body>
-</html>
+  <!-- 以下省略 -->
 ```
 
-上記で読み込まれるJavaScriptは、src/main.jsというファイルを作ってそこに以下を記述します。
+上記で読み込まれるJavaScriptは、js/main.jsというファイルを作ってそこに以下を記述します。
 
-### src/main.jsの中身
+### js/main.jsの中身
 
 ```javascript
 var customerRequestTotal,
