@@ -9,7 +9,8 @@ var customerRequestTotal,
         '<li>' + customerOrderRequest.drink.jp + '</li>' +
         '</ul><hr />',
       callCustomer: 'ご注文のお客様、おまちどうさまでした！<hr />',
-      cookingDone: '----------調理完了！----------<hr />'
+      cookingDone: '----------調理完了！----------<hr />',
+      dringDone: '----------飲み物の準備完了！----------<hr />'
     };
 var calculate = function(){
   var priceList = {
@@ -46,6 +47,7 @@ var cookingStaffAsyncOperation = function(callback){
     _callback();
   }, 3000, callback);
 };
+
 var storeOperation = function(){
   calculate(customerOrderRequest);
   confirmOrderRequest();
@@ -59,8 +61,37 @@ var storeAsyncOperation = function(){
   sayTotalPrice();
   cookingStaffAsyncOperation(function(){
     cookingStaffAsyncCallCustomer();
-  });  
+  });
+};
+
+var cookingStaffDeferredOperation = function(){
+  var deferred = new $.Deferred;
+  setTimeout(function(){
+    $('.operation').append(messages.cookingDone);
+    deferred.resolve();
+  }, 3000);
+  return deferred.promise();
+};
+
+var dringStaffDeferredOperation = function(){
+  var deferred = new $.Deferred;
+  setTimeout(function(){
+    $('.operation').append(messages.dringDone);
+    deferred.resolve();
+  }, 1000);
+  return deferred.promise();
+};
+
+
+var storeDeferredOperation = function(){
+  calculate(customerOrderRequest);
+  confirmOrderRequest();
+  sayTotalPrice();
+  cookingStaffDeferredOperation()
+    .done(dringStaffDeferredOperation)
+    .done(cookingStaffAsyncCallCustomer);  
 };
 
 $('#storeOperation').on('click',storeOperation);
 $('#storeAsyncOperation').on('click',storeAsyncOperation);
+$('#storeDeferredOperation').on('click',storeDeferredOperation);
