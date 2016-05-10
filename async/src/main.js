@@ -88,8 +88,8 @@ var storeDeferredOperation = function(){
   confirmOrderRequest();
   sayTotalPrice();
   cookingStaffDeferredOperation()
-    .then(dringStaffDeferredOperation)
-    .then(cookingStaffAsyncCallCustomer);  
+    .done(dringStaffDeferredOperation)
+    .done(cookingStaffAsyncCallCustomer);
 };
 
 $('#storeOperation').on('click',storeOperation);
