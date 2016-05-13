@@ -91,7 +91,13 @@ var storeDeferredOperation = function(){
     .done(dringStaffDeferredOperation)
     .done(cookingStaffAsyncCallCustomer);
 };
-
+var mergeOperations = function(){
+  $.when(cookingStaffDeferredOperation(), dringStaffDeferredOperation())
+    .done(function(){
+      cookingStaffAsyncCallCustomer();
+    });
+};
 $('#storeOperation').on('click',storeOperation);
 $('#storeAsyncOperation').on('click',storeAsyncOperation);
 $('#storeDeferredOperation').on('click',storeDeferredOperation);
+$('#mergeOperations').on('click',mergeOperations);

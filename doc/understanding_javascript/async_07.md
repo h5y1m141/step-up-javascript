@@ -83,3 +83,50 @@ Deferred対応させたメソッドが２つあった場合に以下のように
 ![概念説明３](../images/explain_deferred_03.png)
 
 非同期処理とDeferredのオブジェクトが紐付いてることで、そこのオブジェクトの状態に応じて次の処理が呼ばれるという流れになります。
+
+## ここまでの説明を踏まえてjQueryのDeferredを利用した形に書き換える
+
+main.jsに以下を追加します
+
+```javascript
+var cookingStaffDeferredOperation = function(){
+  var deferred = new $.Deferred;
+  setTimeout(function(){
+    $('.operation').append(messages.cookingDone);
+    deferred.resolve();
+  }, 3000);
+  return deferred.promise();
+};
+var dringStaffDeferredOperation = function(){
+  var deferred = new $.Deferred;
+  setTimeout(function(){
+    $('.operation').append(messages.dringDone);
+    deferred.resolve();
+  }, 1000);
+  return deferred.promise();
+};
+var storeDeferredOperation = function(){
+  calculate(customerOrderRequest);
+  confirmOrderRequest();
+  sayTotalPrice();
+  cookingStaffDeferredOperation()
+    .done(dringStaffDeferredOperation)
+    .done(cookingStaffAsyncCallCustomer);
+};
+$('#storeDeferredOperation').on('click',storeDeferredOperation);
+```
+
+index.htmlに
+
+```html
+<button id="storeDeferredOperation">Deferredを利用する</button>
+```
+
+という内容を追加して画面上で動作確認をしてみてください。
+
+
+## まとめ
+
+jQueryのDeferredの機能を活用することで処理が入れ子状にならないようにすることが出来ることを紹介しました。
+
+今回のようなサンプルだとjQueryのDeferredの機能の有り難みがそれほど感じられないかもしれませんが、もう少し実践的なサンプルを次で説明します。
