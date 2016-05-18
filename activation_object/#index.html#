@@ -1,0 +1,13 @@
+<html>
+  <head>
+
+  </head>
+  <body>
+
+    <script type="text/javascript" src='/node_modules/jquery/dist/jquery.js'></script>
+    <script type="text/javascript" src='src/main.js'></script>
+  </body>
+</html>
+
+
+g

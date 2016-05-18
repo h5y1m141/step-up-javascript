@@ -53,7 +53,7 @@
         data-chapter-title="関数呼び出し時にthisが生成される"
         data-filepath="doc/understanding_javascript/about_this_03.md"
         data-basepath="../.."
-        data-revision="Mon May 16 2016 18:34:57 GMT+0900 (JST)"
+        data-revision="Wed May 18 2016 17:16:12 GMT+0900 (JST)"
         data-innerlanguage="">
     
 
@@ -938,6 +938,50 @@
                     <section class="normal" id="section-">
                     
                         <h2 id="&#x95A2;&#x6570;&#x547C;&#x3073;&#x51FA;&#x3057;&#x6642;&#x306B;this&#x304C;&#x751F;&#x6210;&#x3055;&#x308C;&#x308B;">&#x95A2;&#x6570;&#x547C;&#x3073;&#x51FA;&#x3057;&#x6642;&#x306B;this&#x304C;&#x751F;&#x6210;&#x3055;&#x308C;&#x308B;</h2>
+<p>&#x5B9F;&#x969B;&#x306B;&#x30B5;&#x30F3;&#x30D7;&#x30EB;&#x30B3;&#x30FC;&#x30C9;&#x3092;&#x66F8;&#x304D;&#x306A;&#x304C;&#x3089;&#x95A2;&#x6570;&#x547C;&#x3073;&#x51FA;&#x3057;&#x6642;&#x306B;this&#x304C;&#x751F;&#x6210;&#x3055;&#x308C;&#x308B;&#x3053;&#x3068;&#x3092;&#x78BA;&#x8A8D;&#x3057;&#x3066;&#x307F;&#x307E;&#x3059;&#x3002;</p>
+<p>&#x5148;&#x307B;&#x3069;&#x8A2D;&#x5B9A;&#x3057;&#x305F;&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306E;js/main.js&#x306B;&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;&#x3092;&#x8A18;&#x8FF0;&#x3057;&#x307E;&#x3059;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> SampleClass,
+    sample;
+
+SampleClass = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">str</span>)</span>{
+  <span class="hljs-keyword">var</span> innerString = <span class="hljs-string">&apos;inner&apos;</span>;
+  <span class="hljs-keyword">this</span>.show = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-built_in">console</span>.log(innerString);
+  };
+};
+
+sample = <span class="hljs-keyword">new</span> SampleClass();
+sample.show();
+</code></pre>
+<p>&#x8A18;&#x8FF0;&#x304C;&#x5B8C;&#x4E86;&#x3057;&#x305F;&#x3089;&#x52D5;&#x4F5C;&#x3092;&#x78BA;&#x8A8D;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+<h4 id="cloud9&#x306E;&#x74B0;&#x5883;&#x306E;&#x65B9;">Cloud9&#x306E;&#x74B0;&#x5883;&#x306E;&#x65B9;</h4>
+<p>&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x3092;&#x5165;&#x529B;&#x3057;&#x3066;Web&#x30B5;&#x30FC;&#x30D0;&#x30FC;&#x6A5F;&#x80FD;&#x3092;&#x7ACB;&#x3061;&#x4E0A;&#x3052;&#x3066;&#x6307;&#x5B9A;&#x306E;&#x30A2;&#x30C9;&#x30EC;&#x30B9;&#x306B;&#x30A2;&#x30AF;&#x30BB;&#x30B9;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+<p>&#x8A73;&#x3057;&#x304F;&#x306F;<a href="../set_up_cloud9.html">Cloud9&#x3068;&#x3044;&#x3046;&#x30AF;&#x30E9;&#x30A6;&#x30C9;&#x4E0A;&#x306E;&#x74B0;&#x5883;&#x3092;&#x5229;&#x7528;&#x3059;&#x308B;</a>&#x306E;&#x30DA;&#x30FC;&#x30B8;&#x306E;<strong>&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x3092;&#x5165;&#x529B;&#x3057;&#x3066;&#x30B5;&#x30FC;&#x30D0;&#x30FC;&#x6A5F;&#x80FD;&#x3092;&#x7ACB;&#x3061;&#x4E0A;&#x3052;&#x308B;</strong>&#x306E;&#x9805;&#x76EE;&#x4EE5;&#x964D;&#x3092;&#x53C2;&#x8003;&#x306B;&#x4F5C;&#x696D;&#x3057;&#x3066;&#x307F;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p>
+<h4 id="&#x30ED;&#x30FC;&#x30AB;&#x30EB;&#x306E;node&#x74B0;&#x5883;&#x3092;&#x5229;&#x7528;&#x3057;&#x3066;&#x308B;&#x65B9;">&#x30ED;&#x30FC;&#x30AB;&#x30EB;&#x306E;Node&#x74B0;&#x5883;&#x3092;&#x5229;&#x7528;&#x3057;&#x3066;&#x308B;&#x65B9;</h4>
+<p>gulp-webserver&#x306F;9000&#x756A;&#x30DD;&#x30FC;&#x30C8;&#x3092;&#x5229;&#x7528;&#x3057;&#x3066;&#x30B5;&#x30FC;&#x30D0;&#x30FC;&#x304C;&#x8D77;&#x52D5;&#x3057;&#x3066;&#x307E;&#x3059;&#x306E;&#x3067;</p>
+<p><a href="http://localhost:9000" target="_blank">http://localhost:9000</a></p>
+<p>&#x306B;&#x30A2;&#x30AF;&#x30BB;&#x30B9;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+<h3 id="&#x5B9F;&#x969B;&#x306B;&#x78BA;&#x8A8D;&#x3057;&#x3066;&#x307F;&#x308B;">&#x5B9F;&#x969B;&#x306B;&#x78BA;&#x8A8D;&#x3057;&#x3066;&#x307F;&#x308B;</h3>
+<p>GoogleChrome&#x3092;&#x4F7F;&#x3063;&#x3066;&#x30B5;&#x30A4;&#x30C8;&#x306B;&#x30A2;&#x30AF;&#x30BB;&#x30B9;&#x3057;&#x3066;&#x304B;&#x3089;&#x3001;&#x30C7;&#x30D9;&#x30ED;&#x30C3;&#x30D1;&#x30FC;&#x30C4;&#x30FC;&#x30EB;&#x3092;&#x8868;&#x793A;&#x3055;&#x305B;&#x307E;&#x3059;&#x3002;</p>
+<p>&#x30C7;&#x30D9;&#x30ED;&#x30C3;&#x30D1;&#x30FC;&#x30C4;&#x30FC;&#x30EB;&#x306F;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306B;Chrome&#x306E;&#x30E1;&#x30CB;&#x30E5;&#x30FC;&#x306E;<strong>&#x8868;&#x793A;</strong>&#x2192;<strong>&#x958B;&#x767A;&#x30FB;&#x7BA1;&#x7406;</strong>&#x2192;<strong>&#x30C7;&#x30D9;&#x30ED;&#x30C3;&#x30D1;&#x30FC;&#x30C4;&#x30FC;&#x30EB;</strong>&#x3068;&#x9032;&#x3080;&#x3053;&#x3068;&#x3067;&#x8868;&#x793A;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;</p>
+<p><img src="../images/chrome_dev_tool_01.png" alt="chrome dev tools&#x8A2D;&#x5B9A;"></p>
+<p>&#x753B;&#x9762;&#x304C;&#x4E0A;&#x4E0B;&#x306B;&#x5206;&#x304B;&#x308C;&#x3066;&#x3001;&#x4E0B;&#x90E8;&#x306B;&#x30C7;&#x30D9;&#x30ED;&#x30C3;&#x30D1;&#x30FC;&#x30C4;&#x30FC;&#x30EB;&#x304C;&#x8868;&#x793A;&#x3055;&#x308C;&#x308B;&#x306E;&#x3067;&#x4EE5;&#x4E0B;&#x4F5C;&#x696D;&#x3092;&#x3057;&#x307E;&#x3059;</p>
+<ol>
+<li>Source&#x30BF;&#x30D6;&#x3092;&#x9078;&#x629E;</li>
+<li>&#x5DE6;&#x5074;&#x306B;&#x8AAD;&#x307F;&#x8FBC;&#x307E;&#x308C;&#x3066;&#x308B;JavaScript&#x3001;CSS&#x306E;&#x4E00;&#x89A7;&#x304C;&#x8868;&#x793A;&#x3055;&#x308C;&#x307E;&#x3059;</li>
+<li>&#x4ECA;&#x56DE;&#x5B9F;&#x88C5;&#x3057;&#x305F;main.js&#x3092;&#x9078;&#x629E;&#x3059;&#x308B;&#x3068;&#x3001;&#x30C7;&#x30D9;&#x30ED;&#x30C3;&#x30D1;&#x30FC;&#x30C4;&#x30FC;&#x30EB;&#x306E;&#x771F;&#x3093;&#x4E2D;&#x306E;&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x306B;&#x5148;&#x307B;&#x3069;&#x5B9F;&#x88C5;&#x3057;&#x305F;main.js&#x306E;&#x4E2D;&#x8EAB;&#x304C;&#x8868;&#x793A;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;</li>
+</ol>
+<p><img src="../images/chrome_dev_tool_02.png" alt="chrome dev tools&#x8A2D;&#x5B9A;"></p>
+<p>main.js&#x304C;&#x8868;&#x793A;&#x3055;&#x308C;&#x305F;&#x3089;<strong>&#x51E6;&#x7406;&#x3092;&#x4E00;&#x6642;&#x505C;&#x6B62;&#x3055;&#x305B;&#x308B;&#x305F;&#x3081;&#x306B;this.show&#x306E;&#x6A2A;&#x306E;&#x3042;&#x305F;&#x308A;&#x3092;&#x30DE;&#x30A6;&#x30B9;&#x3067;&#x30AF;&#x30EA;&#x30C3;&#x30AF;</strong>&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p>
+<p>&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x305F;&#x7B87;&#x6240;&#x306E;&#x5DE6;&#x5074;&#x306B;&#x9752;&#x77E2;&#x5370;&#x304C;&#x3053;&#x306E;&#x3088;&#x3046;&#x306B;&#x8868;&#x793A;&#x3055;&#x308C;&#x305F;&#x72B6;&#x614B;&#x306B;&#x306A;&#x3063;&#x305F;&#x3053;&#x3068;&#x3092;&#x78BA;&#x8A8D;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;</p>
+<p><img src="../images/chrome_dev_tool_05.png" alt="chrome dev tools&#x8A2D;&#x5B9A;"></p>
+<p>&#x3053;&#x306E;&#x72B6;&#x614B;&#x3067;Web&#x30D6;&#x30E9;&#x30A6;&#x30B6;&#x306E;&#x518D;&#x8AAD;&#x307F;&#x8FBC;&#x307F;&#x30DC;&#x30BF;&#x30F3;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3059;&#x308B;&#x3068;&#x5148;&#x307B;&#x3069;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x305F;&#x7B87;&#x6240;&#x306E;&#x8A18;&#x8FF0;&#x304C;&#x5B9F;&#x884C;&#x3055;&#x308C;&#x308B;&#x30BF;&#x30A4;&#x30DF;&#x30F3;&#x30B0;&#x3067;&#x3053;&#x306E;&#x3088;&#x3046;&#x306B;&#x2193;&#x51E6;&#x7406;&#x304C;&#x4E00;&#x6642;&#x505C;&#x6B62;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+<p><img src="../images/chrome_dev_tool_04.png" alt="chrome dev tools&#x8A2D;&#x5B9A;"></p>
+<p>&#x4E0A;&#x8A18;&#x753B;&#x9762;&#x306E;&#x4E00;&#x90E8;&#x3092;&#x62E1;&#x5927;&#x3057;&#x305F;&#x753B;&#x50CF;&#x3092;&#x4EE5;&#x4E0B;&#x8CBC;&#x308A;&#x307E;&#x3059;&#x304C;&#x3053;&#x306E;&#x3088;&#x3046;&#x306B;this&#x304C;&#x81EA;&#x52D5;&#x7684;&#x306B;&#x751F;&#x6210;&#x3055;&#x308C;&#x3066;&#x308B;&#x3053;&#x3068;&#x304C;&#x78BA;&#x8A8D;&#x3067;&#x304D;&#x308B;&#x304B;&#x3068;&#x601D;&#x3044;&#x307E;&#x3059;&#x3002;</p>
+<p><img src="../images/chrome_dev_tool_06.png" alt="chrome dev tools&#x8A2D;&#x5B9A;"></p>
+<h2 id="&#x307E;&#x3068;&#x3081;">&#x307E;&#x3068;&#x3081;</h2>
+<p>GoogleChrome&#x306E;&#x30C7;&#x30D9;&#x30ED;&#x30C3;&#x30D1;&#x30FC;&#x30C4;&#x30FC;&#x30EB;&#x3092;&#x5229;&#x7528;&#x3057;&#x3066;&#x95A2;&#x6570;&#x547C;&#x3073;&#x51FA;&#x3057;&#x6642;&#x306B;this&#x304C;&#x751F;&#x6210;&#x3055;&#x308C;&#x3066;&#x308B;&#x3053;&#x3068;&#x304C;&#x78BA;&#x8A8D;&#x3067;&#x304D;&#x305F;&#x304B;&#x3068;&#x601D;&#x3044;&#x307E;&#x3059;&#x3002;</p>
+<p>this&#x306F;&#x95A2;&#x6570;&#x5B9F;&#x884C;&#x6642;&#x306B;&#x751F;&#x6210;&#x3055;&#x308C;&#x307E;&#x3059;&#x304C;&#x3001;this&#x304C;&#x547C;&#x3070;&#x308C;&#x308B;&#x65B9;&#x6CD5;&#x3068;&#x3057;&#x3066;&#x306F;&#x5168;&#x90E8;&#x3067;4&#x30D1;&#x30BF;&#x30FC;&#x30F3;&#x3042;&#x308B;&#x306E;&#x3067;&#x305D;&#x306E;&#x305D;&#x306E;&#x3042;&#x305F;&#x308A;&#x306E;&#x3053;&#x3068;&#x3092;&#x5FF5;&#x982D;&#x306B;&#x7F6E;&#x3044;&#x3066;&#x304A;&#x304F;&#x3068;&#x3082;&#x3046;&#x5C11;&#x3057;&#x7406;&#x89E3;&#x304C;&#x6DF1;&#x307E;&#x308B;&#x3068;&#x601D;&#x3046;&#x306E;&#x3067;&#x6B21;&#x3067;&#x9806;&#x756A;&#x306B;&#x89E3;&#x8AAC;&#x3057;&#x3066;&#x3044;&#x304D;&#x307E;&#x3059;&#x3002;</p>
 
                     
                     </section>
