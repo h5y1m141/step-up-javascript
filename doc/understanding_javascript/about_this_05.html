@@ -53,7 +53,7 @@
         data-chapter-title="thisの呼ばれ方その２：コンストラクタ内のthis"
         data-filepath="doc/understanding_javascript/about_this_05.md"
         data-basepath="../.."
-        data-revision="Wed May 18 2016 17:16:12 GMT+0900 (JST)"
+        data-revision="Mon May 23 2016 17:28:28 GMT+0900 (JST)"
         data-innerlanguage="">
     
 
@@ -938,7 +938,10 @@
                     <section class="normal" id="section-">
                     
                         <h2 id="this&#x306E;&#x547C;&#x3070;&#x308C;&#x65B9;&#x305D;&#x306E;&#xFF12;&#xFF1A;&#x30B3;&#x30F3;&#x30B9;&#x30C8;&#x30E9;&#x30AF;&#x30BF;&#x5185;&#x306E;this">this&#x306E;&#x547C;&#x3070;&#x308C;&#x65B9;&#x305D;&#x306E;&#xFF12;&#xFF1A;&#x30B3;&#x30F3;&#x30B9;&#x30C8;&#x30E9;&#x30AF;&#x30BF;&#x5185;&#x306E;this</h2>
-<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> sample,
+<p>&#x3053;&#x3061;&#x3089;&#x306F;<a href="about_this_03.html">&#x95A2;&#x6570;&#x547C;&#x3073;&#x51FA;&#x3057;&#x6642;&#x306B;this&#x304C;&#x751F;&#x6210;&#x3055;&#x308C;&#x308B;</a>&#x306E;&#x30DA;&#x30FC;&#x30B8;&#x3067;&#x7D39;&#x4ECB;&#x3057;&#x305F;&#x3057;&#x307E;&#x3057;&#x305F;&#x304C;&#x3001;&#x30B0;&#x30ED;&#x30FC;&#x30D0;&#x30EB;&#x5909;&#x6570;&#x306E;&#x9818;&#x57DF;&#x306B;&#x3082;this&#x306F;&#x5B58;&#x5728;&#x3057;&#x3066;&#x304A;&#x308A;&#x3001;Web&#x30D6;&#x30E9;&#x30A6;&#x30B6;&#x306E;&#x5834;&#x5408;&#x306B;&#x306F;window&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;</p>
+<h2 id="&#x5B9F;&#x969B;&#x306B;&#x52D5;&#x4F5C;&#x78BA;&#x8A8D;&#x3057;&#x3066;&#x307F;&#x308B;">&#x5B9F;&#x969B;&#x306B;&#x52D5;&#x4F5C;&#x78BA;&#x8A8D;&#x3057;&#x3066;&#x307F;&#x308B;</h2>
+<p>&#x5148;&#x307B;&#x3069;&#x3068;&#x540C;&#x69D8;&#x306B;&#x8A2D;&#x5B9A;&#x3057;&#x305F;&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306E;js/main.js&#x306B;&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;&#x3092;&#x8FFD;&#x8A18;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> constructorSample,
     ConstructorSample;
 ConstructorSample = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
   <span class="hljs-keyword">this</span>.str = <span class="hljs-string">&apos;this is a sample&apos;</span>;
@@ -946,10 +949,16 @@ ConstructorSample = <span class="hljs-function"><span class="hljs-keyword">funct
     <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>.str);
   };
 };
-sample = <span class="hljs-keyword">new</span> ConstructorSample();
-<span class="hljs-built_in">console</span>.log(sample.str);
-sample.show();
+constructorSample = <span class="hljs-keyword">new</span> ConstructorSample();
+constructorSample.show();
 </code></pre>
+<p>&#x30B3;&#x30FC;&#x30C9;&#x306E;&#x4FEE;&#x6B63;&#x304C;&#x5B8C;&#x4E86;&#x3057;&#x305F;&#x3089;&#x3001;GoogleChrome&#x3092;&#x4F7F;&#x3063;&#x3066;&#x30B5;&#x30A4;&#x30C8;&#x306B;&#x30A2;&#x30AF;&#x30BB;&#x30B9;&#x3057;&#x3066;&#x304B;&#x3089;&#x3001;&#x30C7;&#x30D9;&#x30ED;&#x30C3;&#x30D1;&#x30FC;&#x30C4;&#x30FC;&#x30EB;&#x3092;&#x8868;&#x793A;&#x3055;&#x305B;&#x307E;&#x3059;&#x3002;</p>
+<ol>
+<li>constructorSample = new ConstructorSample()&#x306E;&#x6A2A;&#x306E;&#x3042;&#x305F;&#x308A;&#x3092;&#x30DE;&#x30A6;&#x30B9;&#x3067;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x3066;&#x30D6;&#x30EC;&#x30FC;&#x30AF;&#x30DD;&#x30A4;&#x30F3;&#x30C8;&#x3092;&#x8A2D;&#x5B9A;</li>
+<li>&#x3053;&#x306E;&#x72B6;&#x614B;&#x3067;Web&#x30D6;&#x30E9;&#x30A6;&#x30B6;&#x306E;&#x518D;&#x8AAD;&#x307F;</li>
+<li>&#x8A2D;&#x5B9A;&#x3057;&#x305F;&#x30D6;&#x30EC;&#x30FC;&#x30AF;&#x30DD;&#x30A4;&#x30F3;&#x30C8;&#x306E;&#x7B87;&#x6240;&#x3067;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306B;&#x51E6;&#x7406;&#x304C;&#x6B62;&#x307E;&#x308A;&#x307E;&#x3059;&#x3002;&#x30B3;&#x30F3;&#x30B9;&#x30C8;&#x30E9;&#x30AF;&#x30BF;&#x5185;&#x306E;this&#x3092;&#x78BA;&#x8A8D;&#x3059;&#x308B;&#x305F;&#x3081;&#x306B;&#x306F;1&#x3064;&#x3065;&#x3064;&#x51E6;&#x7406;&#x3092;&#x9032;&#x3081;&#x3066;&#x3044;&#x304F;&#x5FC5;&#x8981;&#x304C;&#x3042;&#x308A;&#x305D;&#x306E;&#x305F;&#x3081;&#x306B;&#x306F;&#x3001;&#x4EE5;&#x4E0B;&#x753B;&#x9762;&#x30AD;&#x30E3;&#x30D7;&#x30C1;&#x30E3;&#x3067;&#x56F2;&#x3063;&#x3066;&#x308B;Step into&#x306E;&#x30DC;&#x30BF;&#x30F3;&#x7B87;&#x6240;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x306A;&#x304C;&#x3089;&#x51E6;&#x7406;&#x3092;&#x9032;&#x3081;&#x3066;&#x3044;&#x304D;&#x307E;&#x3059;<img src="../images/about_this_02.png" alt="this&#x306E;&#x78BA;&#x8A8D;"></li>
+<li>&#x9806;&#x756A;&#x306B;&#x51E6;&#x7406;&#x3092;&#x9032;&#x3081;&#x3066;&#x3044;&#x304F;&#x3053;&#x3068;&#x3067;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306B;&#x30B3;&#x30F3;&#x30B9;&#x30C8;&#x30E9;&#x30AF;&#x30BF;&#x5185;&#x306E;this&#x304C;&#x751F;&#x6210;&#x3055;&#x308C;&#x308B;&#x30BF;&#x30A4;&#x30DF;&#x30F3;&#x30B0;&#x304C;&#x78BA;&#x8A8D;&#x3067;&#x304D;&#x308B;&#x304B;&#x3068;&#x601D;&#x3044;&#x307E;&#x3059;<img src="../images/about_this_03.png" alt="this&#x306E;&#x78BA;&#x8A8D;"></li>
+</ol>
 
                     
                     </section>
