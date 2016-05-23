@@ -1,13 +1,25 @@
 ## thisの呼ばれ方その１：トップレベルのthis
 
-```javascript
-var globalString;
-globalString = 'this is a global';
+[アクティベーションオブジェクトとスコープチェーンについて](about_this_02.md)のページで紹介しましたが、グローバル変数の領域にもthisは存在しており、Webブラウザの場合にはwindowオブジェクトになります。
 
-console.log(this.globalString);   //(1)
-console.log(window.globalString); //(2)
+## 実際に動作確認してみる
+
+簡単なサンプルコードを書いて実際にトップレベルのthisについて確認してみます。
+
+設定したプロジェクトのjs/main.jsに以下内容を追記します。
+
+```javascript
+function showMessage(){
+  console.log('メッセージを表示');
+};
+showMessage();
 ```
 
-1. Webブラウザ上では window はグローバル変数。またはwindowオブジェクトの**プロパティも全てグローバル変数**になる
-2. this.globalStringは上記理由のためwindow.globalStringと等価
+コードの修正が完了したら、GoogleChromeを使ってサイトにアクセスしてから、デベロッパーツールを表示させます。
 
+
+1. console.log('メッセージを表示')の横のあたりをマウスでクリックしてブレークポイントを設定
+2. この状態でWebブラウザの再読み
+3. 設定したブレークポイントの箇所で以下のように処理が止まってその時にthisが生成されてることを確認してみてください。
+
+![thisの確認](../images/about_this_01.png)
