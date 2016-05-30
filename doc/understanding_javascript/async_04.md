@@ -7,7 +7,7 @@ HTMLに以下を追加します
 ```html
 <body>
   <button id="storeOperation">処理の順番が正しくない</button>
-  <div class="customerRrequest"></div>
+  <div class="customerRequest"></div>
 
   <div class="operation"></div>
   <!-- 以下省略 -->
@@ -44,7 +44,7 @@ var sayTotalPrice = function(){
   $('.operation').append('<hr />');
 };
 var confirmOrderRequest = function(){
-  $('.customerRrequest').append(messages.confirm);
+  $('.customerRequest').append(messages.confirm);
 };
 var cookingStaffCallCustomer = function(){
   $('.operation').append(messages.callCustomer);

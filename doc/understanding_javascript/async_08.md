@@ -79,7 +79,7 @@ index.htmlに
   <button id="storeAsyncOperation">コールバックで非同期処理を適切に処理</button>
   <button id="storeDeferredOperation">Deferredを利用する</button>
   <button id="mergeOperations">whenを利用する</button>
-  <div class="customerRrequest"></div>
+  <div class="customerRequest"></div>
 
   <div class="operation"></div>
   <script type="text/javascript" src='/node_modules/jquery/dist/jquery.js'></script>
@@ -118,7 +118,7 @@ var sayTotalPrice = function(){
   $('.operation').append('<hr />');
 };
 var confirmOrderRequest = function(){
-  $('.customerRrequest').append(messages.confirm);
+  $('.customerRequest').append(messages.confirm);
 };
 var cookingStaffCallCustomer = function(){
   $('.operation').append(messages.callCustomer);
