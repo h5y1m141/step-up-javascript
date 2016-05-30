@@ -53,7 +53,7 @@
         data-chapter-title="非同期処理を考慮しない書き方"
         data-filepath="doc/understanding_javascript/async_04.md"
         data-basepath="../.."
-        data-revision="Mon May 23 2016 17:28:28 GMT+0900 (JST)"
+        data-revision="Tue May 31 2016 08:41:12 GMT+0900 (JST)"
         data-innerlanguage="">
     
 
@@ -942,7 +942,7 @@
 <h3 id="indexhtml">index.html</h3>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;storeOperation&quot;</span>&gt;</span>&#x51E6;&#x7406;&#x306E;&#x9806;&#x756A;&#x304C;&#x6B63;&#x3057;&#x304F;&#x306A;&#x3044;<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;customerRrequest&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;customerRequest&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;operation&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-comment">&lt;!-- &#x4EE5;&#x4E0B;&#x7701;&#x7565; --&gt;</span>
@@ -975,7 +975,7 @@
   $(<span class="hljs-string">&apos;.operation&apos;</span>).append(<span class="hljs-string">&apos;&lt;hr /&gt;&apos;</span>);
 };
 <span class="hljs-keyword">var</span> confirmOrderRequest = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
-  $(<span class="hljs-string">&apos;.customerRrequest&apos;</span>).append(messages.confirm);
+  $(<span class="hljs-string">&apos;.customerRequest&apos;</span>).append(messages.confirm);
 };
 <span class="hljs-keyword">var</span> cookingStaffCallCustomer = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
   $(<span class="hljs-string">&apos;.operation&apos;</span>).append(messages.callCustomer);
