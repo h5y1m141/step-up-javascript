@@ -4,7 +4,7 @@
 
 ### 概念図
 
-![stepupjavascripttestingframework 001](images/StepUpJavaScriptTestingFramework.001.png)
+![stepupjavascripttestingframework 001](../images/StepUpJavaScriptTestingFramework.001.png)
 
 ### 個々の要素の説明
 

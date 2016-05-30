@@ -4,7 +4,7 @@
 
 ### 概念図
 
-![stepupjavascripttestingframework 003](images/StepUpJavaScriptTestingFramework.003.png)
+![stepupjavascripttestingframework 003](../images/StepUpJavaScriptTestingFramework.003.png)
 
 
 ### Karmaを組み合わせた理由について

@@ -4,7 +4,7 @@
 
 ### 概念図
 
-![stepupjavascripttestingframework 002](images/StepUpJavaScriptTestingFramework.002.png)
+![stepupjavascripttestingframework 002](../images/StepUpJavaScriptTestingFramework.002.png)
 
 ### 説明
 
@@ -12,7 +12,7 @@
 
 英語ですが以下のようにドキュメント自体もしっかりと整備されています。
 
-![Jasmine公式ドキュメントのキャプチャ](images/introduction_jasmine.png)
+![Jasmine公式ドキュメントのキャプチャ](../images/introduction_jasmine.png)
 
 上記ドキュメントを見てもらうとわかりますが、テストされた値の評価をする記法が豊富なので、初めてJavaScriptの単体テストを書く時にどこから手を付けて良いのか戸惑いやすいかもしれません。
 
@@ -20,7 +20,7 @@
 
 Jasmineで書かれたコードは以下の様な構造になります。
 
-![Jasmineで書かれたコードの構造の図解](images/explain_jasmine_code.png)
+![Jasmineで書かれたコードの構造の図解](../images/explain_jasmine_code.png)
 
 ポイントになる所をいくつか説明します。
 
