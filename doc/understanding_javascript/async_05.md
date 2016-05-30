@@ -18,7 +18,7 @@
   <button id="storeOperation">処理の順番が正しくない</button>
   <!-- 以下を追加する -->
   <button id="storeAsyncOperation">コールバックで非同期処理を適切に処理</button>
-  <div class="customerRrequest"></div>
+  <div class="customerRequest"></div>
 
   <div class="operation"></div>
   <script type="text/javascript" src='/node_modules/jquery/dist/jquery.js'></script>
@@ -84,7 +84,7 @@ var sayTotalPrice = function(){
 };
 
 var confirmOrderRequest = function(){
-  $('.customerRrequest').append(messages.confirm);
+  $('.customerRequest').append(messages.confirm);
 };
 var cookingStaffCallCustomer = function(){
   $('.operation').append(messages.callCustomer);

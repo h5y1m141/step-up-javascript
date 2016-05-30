@@ -26,7 +26,7 @@ var sayTotalPrice = function(){
 };
 
 var confirmOrderRequest = function(){
-  $('.customerRrequest').append(messages.confirm);
+  $('.customerRequest').append(messages.confirm);
 };
 var cookingStaffCallCustomer = function(){
   $('.operation').append(messages.callCustomer);
